@@ -1,10 +1,18 @@
+import { Code, Users, Settings, Handshake } from "lucide-react";
+import Link from "next/link";
+
 const services = [
   {
     title: "受託開発",
+    href: "/lp/development",
+    icon: Code,
+    iconColor: "text-blue-600 dark:text-blue-400",
     description:
       "Webシステム・アプリケーションの設計、開発、保守をワンストップで対応。要件定義からリリース後の改善まで、効率的な開発体制を提供。",
-    bgColor: "bg-blue-50 dark:bg-blue-950/20",
+    bgColor: "bg-muted/30 dark:bg-muted/20",
     borderColor: "border-blue-500/30",
+    iconBgColor: "bg-blue-100 dark:bg-blue-900/30",
+    gradientColor: "from-blue-200/30",
     layers: [
       {
         title: "要件定義・設計",
@@ -30,10 +38,15 @@ const services = [
   },
   {
     title: "業務委託",
+    href: "/lp/contract",
+    icon: Users,
+    iconColor: "text-green-600 dark:text-green-400",
     description:
       "フロントエンド・バックエンド・インフラなど専門領域のプロフェッショナルが、クライアントのチームにジョインして支援。",
-    bgColor: "bg-green-50 dark:bg-green-950/20",
+    bgColor: "bg-muted/30 dark:bg-muted/20",
     borderColor: "border-green-500/30",
+    iconBgColor: "bg-green-100 dark:bg-green-900/30",
+    gradientColor: "from-green-200/30",
     layers: [
       {
         title: "フロントエンド開発",
@@ -59,10 +72,15 @@ const services = [
   },
   {
     title: "システム導入・運用コンサルティング",
+    href: "/lp/consulting",
+    icon: Settings,
+    iconColor: "text-purple-600 dark:text-purple-400",
     description:
       "業務効率化・DX推進を目的としたシステム選定・導入・運用のサポート。課題分析から改善提案、ベンダー調整まで一貫して対応。",
-    bgColor: "bg-purple-50 dark:bg-purple-950/20",
+    bgColor: "bg-muted/30 dark:bg-muted/20",
     borderColor: "border-purple-500/30",
+    iconBgColor: "bg-purple-100 dark:bg-purple-900/30",
+    gradientColor: "from-purple-200/30",
     layers: [
       {
         title: "現状分析・課題抽出",
@@ -88,10 +106,15 @@ const services = [
   },
   {
     title: "WebサービスのM&A仲介",
+    href: "/lp/ma",
+    icon: Handshake,
+    iconColor: "text-orange-600 dark:text-orange-400",
     description:
       "中小規模のWebサービスやSaaSを中心に、「売りたい」と「買いたい」をつなぐM&A仲介・評価・交渉支援を実施。",
-    bgColor: "bg-orange-50 dark:bg-orange-950/20",
+    bgColor: "bg-muted/30 dark:bg-muted/20",
     borderColor: "border-orange-500/30",
+    iconBgColor: "bg-orange-100 dark:bg-orange-900/30",
+    gradientColor: "from-orange-200/30",
     layers: [
       {
         title: "企業価値評価",
@@ -120,45 +143,73 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="py-20">
-      <div className="mb-12 text-center">
-        <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-          事業内容
-        </h2>
-        <p className="mx-auto max-w-2xl text-muted-foreground">
-          お客様の課題解決をサポートする4つのサービス
-        </p>
-      </div>
-      <div className="space-y-12">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`w-full rounded-lg ${service.bgColor} py-8 sm:py-12`}
-          >
-            <div className="mb-8 text-center">
-              <h3 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">
-                {service.title}
-              </h3>
-              <p className="mx-auto max-w-3xl px-4 text-base text-muted-foreground sm:text-lg">
-                {service.description}
-              </p>
-            </div>
-            <div className="grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4 sm:px-8 lg:px-12">
-              {service.layers.map((layer, layerIndex) => (
-                <div
-                  key={layerIndex}
-                  className={`min-h-[160px] rounded-md border-l-2 ${service.borderColor} bg-background/50 p-5 backdrop-blur-sm`}
+      <div className="container mx-auto px-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            事業内容
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            お客様の課題解決をサポートする4つのサービス
+          </p>
+        </div>
+        <div className="space-y-16">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`group relative overflow-hidden rounded-2xl ${service.bgColor} p-8 transition-all duration-300 hover:shadow-xl sm:p-12`}
+            >
+              {/* 装飾的なグラデーション */}
+              <div className={`absolute right-0 top-0 h-64 w-64 rounded-full bg-gradient-to-br ${service.gradientColor} to-transparent opacity-50 blur-3xl`} />
+              
+              <div className="relative">
+                <Link
+                  href={service.href}
+                  className="mb-8 flex flex-col items-center text-center sm:flex-row sm:text-left transition-opacity hover:opacity-90"
                 >
-                  <h4 className="mb-3 font-semibold text-foreground">
-                    {layer.title}
-                  </h4>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {layer.description}
-                  </p>
+                  {/* アイコン */}
+                  <div className="mb-6 flex-shrink-0 sm:mb-0 sm:mr-6">
+                    <div className={`relative rounded-2xl ${service.iconBgColor} p-5 shadow-lg transition-transform duration-300 group-hover:scale-110`}>
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradientColor} to-transparent opacity-50`} />
+                      <service.icon className={`relative h-10 w-10 ${service.iconColor}`} />
+                    </div>
+                  </div>
+                  
+                  {/* タイトルと説明 */}
+                  <div className="flex-1">
+                    <h3 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl">
+                      {service.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+                      {service.description}
+                    </p>
+                  </div>
+                </Link>
+                
+                {/* レイヤーグリッド */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {service.layers.map((layer, layerIndex) => (
+                    <div
+                      key={layerIndex}
+                      className={`group/layer relative overflow-hidden rounded-xl border-l-4 ${service.borderColor} bg-background/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]`}
+                    >
+                      {/* ホバー時のグラデーション */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradientColor} to-transparent opacity-0 transition-opacity duration-300 group-hover/layer:opacity-100`} />
+                      
+                      <div className="relative">
+                        <h4 className="mb-3 text-base font-semibold text-foreground">
+                          {layer.title}
+                        </h4>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {layer.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
