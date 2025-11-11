@@ -1,5 +1,6 @@
 import { Code, Users, Settings, Handshake } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -143,73 +144,56 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            事業内容
-          </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
-            お客様の課題解決をサポートする4つのサービス
-          </p>
-        </div>
-        <div className="space-y-16">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group relative overflow-hidden rounded-2xl ${service.bgColor} p-8 transition-all duration-300 hover:shadow-xl sm:p-12`}
-            >
-              {/* 装飾的なグラデーション */}
-              <div className={`absolute right-0 top-0 h-64 w-64 rounded-full bg-gradient-to-br ${service.gradientColor} to-transparent opacity-50 blur-3xl`} />
-              
-              <div className="relative">
-                <Link
-                  href={service.href}
-                  className="mb-8 flex flex-col items-center text-center sm:flex-row sm:text-left transition-opacity hover:opacity-90"
-                >
+      <div className="mb-16 text-center">
+        <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-500 dark:text-gray-400 sm:text-4xl">
+          事業内容
+        </h2>
+        <p className="mx-auto max-w-2xl text-gray-500 dark:text-gray-500">
+          お客様の課題解決をサポートする4つのサービス
+        </p>
+      </div>
+      <div className="space-y-0">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`group relative flex flex-col ${service.bgColor} py-16 transition-all duration-300`}
+          >
+            <div className="container mx-auto px-4">
+              <div className="relative flex-1">
+                <div className="mb-8 flex flex-col items-center text-center sm:flex-row sm:text-left">
                   {/* アイコン */}
                   <div className="mb-6 flex-shrink-0 sm:mb-0 sm:mr-6">
-                    <div className={`relative rounded-2xl ${service.iconBgColor} p-5 shadow-lg transition-transform duration-300 group-hover:scale-110`}>
-                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradientColor} to-transparent opacity-50`} />
-                      <service.icon className={`relative h-10 w-10 ${service.iconColor}`} />
+                    <div className="relative rounded-2xl bg-muted p-5 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <service.icon className="relative h-10 w-10 text-muted-foreground" />
                     </div>
                   </div>
                   
                   {/* タイトルと説明 */}
                   <div className="flex-1">
-                    <h3 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl">
+                    <h3 className="mb-3 text-2xl font-bold tracking-tight text-gray-500 dark:text-gray-400 sm:text-3xl">
                       {service.title}
                     </h3>
-                    <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-500 sm:text-lg">
                       {service.description}
                     </p>
                   </div>
-                </Link>
-                
-                {/* レイヤーグリッド */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {service.layers.map((layer, layerIndex) => (
-                    <div
-                      key={layerIndex}
-                      className={`group/layer relative overflow-hidden rounded-xl border-l-4 ${service.borderColor} bg-background/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]`}
-                    >
-                      {/* ホバー時のグラデーション */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradientColor} to-transparent opacity-0 transition-opacity duration-300 group-hover/layer:opacity-100`} />
-                      
-                      <div className="relative">
-                        <h4 className="mb-3 text-base font-semibold text-foreground">
-                          {layer.title}
-                        </h4>
-                        <p className="text-sm leading-relaxed text-muted-foreground">
-                          {layer.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
+              
+              {/* ボタン */}
+              <div className="mt-auto flex justify-center pt-6">
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-8 py-6 border border-border/50 bg-transparent hover:bg-muted/50 hover:border-border transition-all duration-200 rounded-lg shadow-sm hover:shadow-md"
+                >
+                  <Link href={service.href}>詳細はこちら</Link>
+                </Button>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
