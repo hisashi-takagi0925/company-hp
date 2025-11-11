@@ -32,7 +32,7 @@ export function Header() {
             会社概要
           </Link>
           <Link
-            href="/contact"
+            href="/#contact"
             className="font-medium transition-colors hover:text-primary"
           >
             お問い合わせ

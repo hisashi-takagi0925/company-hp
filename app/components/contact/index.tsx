@@ -68,13 +68,7 @@ export function ContactForm() {
 
   return (
     <Card className="mx-auto max-w-2xl">
-      <CardHeader>
-        <CardTitle>お問い合わせ</CardTitle>
-        <CardDescription>
-          ご質問やご相談がございましたら、以下のフォームよりお気軽にお問い合わせください。
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
