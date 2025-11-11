@@ -1,142 +1,34 @@
-import { Code, Users, Settings, Handshake } from "lucide-react";
+import { Settings, Handshake } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "受託開発",
-    href: "/lp/development",
-    icon: Code,
-    iconColor: "text-blue-600 dark:text-blue-400",
-    description:
-      "Webシステム・アプリケーションの設計、開発、保守をワンストップで対応。要件定義からリリース後の改善まで、効率的な開発体制を提供。",
-    bgColor: "bg-muted/30 dark:bg-muted/20",
-    borderColor: "border-blue-500/30",
-    iconBgColor: "bg-blue-100 dark:bg-blue-900/30",
-    gradientColor: "from-blue-200/30",
-    layers: [
-      {
-        title: "要件定義・設計",
-        description:
-          "お客様のビジネス課題をヒアリングし、最適なシステム設計を提案。技術選定からアーキテクチャ設計まで、一貫してサポートします。",
-      },
-      {
-        title: "開発・実装",
-        description:
-          "フロントエンド、バックエンド、インフラまで、最新技術を活用した高品質な開発を実施。アジャイル開発手法により、柔軟に対応します。",
-      },
-      {
-        title: "テスト・品質保証",
-        description:
-          "単体テストから結合テスト、E2Eテストまで、徹底した品質管理を行い、安定したシステムを提供します。",
-      },
-      {
-        title: "リリース・保守",
-        description:
-          "スムーズなリリース支援から、運用保守まで長期的にサポート。継続的な改善提案により、システムの価値を最大化します。",
-      },
-    ],
-  },
-  {
-    title: "業務委託",
-    href: "/lp/contract",
-    icon: Users,
-    iconColor: "text-green-600 dark:text-green-400",
-    description:
-      "フロントエンド・バックエンド・インフラなど専門領域のプロフェッショナルが、クライアントのチームにジョインして支援。",
-    bgColor: "bg-muted/30 dark:bg-muted/20",
-    borderColor: "border-green-500/30",
-    iconBgColor: "bg-green-100 dark:bg-green-900/30",
-    gradientColor: "from-green-200/30",
-    layers: [
-      {
-        title: "フロントエンド開発",
-        description:
-          "React、Vue、Next.jsなどのモダンフレームワークを活用したUI/UX開発。レスポンシブ対応やアクセシビリティにも配慮します。",
-      },
-      {
-        title: "バックエンド開発",
-        description:
-          "API設計、データベース設計、サーバーサイドロジックの実装。スケーラブルで保守性の高いシステム構築を支援します。",
-      },
-      {
-        title: "インフラ・DevOps",
-        description:
-          "クラウドインフラの構築・運用、CI/CDパイプラインの構築、モニタリング・ログ管理まで、DevOpsの全領域をカバーします。",
-      },
-      {
-        title: "チーム連携",
-        description:
-          "お客様の開発チームにシームレスに統合し、既存の開発フローに合わせた柔軟な支援を提供します。",
-      },
-    ],
-  },
-  {
     title: "システム導入・運用コンサルティング",
     href: "/lp/consulting",
     icon: Settings,
-    iconColor: "text-purple-600 dark:text-purple-400",
     description:
-      "業務効率化・DX推進を目的としたシステム選定・導入・運用のサポート。課題分析から改善提案、ベンダー調整まで一貫して対応。",
+      "現場で戦うエンジニアによる実践的コンサル。既存業務の分析からDX推進まで、技術的な視点で伴走支援します。",
     bgColor: "bg-muted/30 dark:bg-muted/20",
-    borderColor: "border-purple-500/30",
-    iconBgColor: "bg-purple-100 dark:bg-purple-900/30",
-    gradientColor: "from-purple-200/30",
-    layers: [
-      {
-        title: "現状分析・課題抽出",
-        description:
-          "業務フローの分析、システム現状の調査を行い、改善すべき課題を明確化。データに基づいた客観的な分析を提供します。",
-      },
-      {
-        title: "システム選定",
-        description:
-          "お客様の要件に最適なシステム・ツールを選定。複数ベンダーとの比較検討を行い、コストパフォーマンスの高い提案を実施します。",
-      },
-      {
-        title: "導入支援",
-        description:
-          "導入計画の策定から、データ移行、ユーザー教育まで、スムーズな導入をサポート。リスクを最小化しながら進めます。",
-      },
-      {
-        title: "運用改善",
-        description:
-          "導入後の運用状況をモニタリングし、継続的な改善提案を実施。システムの効果を最大化するためのサポートを提供します。",
-      },
+    features: [
+      "既存業務の分析、課題抽出",
+      "システム選定、導入支援、要件定義の整理",
+      "開発ベンダーとの調整・レビュー・品質監修",
+      "DX推進、業務効率化の伴走支援",
     ],
   },
   {
-    title: "WebサービスのM&A仲介",
+    title: "Webサービス・SaaSのM&Aアドバイザリー",
     href: "/lp/ma",
     icon: Handshake,
-    iconColor: "text-orange-600 dark:text-orange-400",
     description:
-      "中小規模のWebサービスやSaaSを中心に、「売りたい」と「買いたい」をつなぐM&A仲介・評価・交渉支援を実施。",
+      "技術に強いM&A仲介。エンジニア視点で小規模SaaS・個人開発サービスを評価し、適切なマッチングを実現します。",
     bgColor: "bg-muted/30 dark:bg-muted/20",
-    borderColor: "border-orange-500/30",
-    iconBgColor: "bg-orange-100 dark:bg-orange-900/30",
-    gradientColor: "from-orange-200/30",
-    layers: [
-      {
-        title: "企業価値評価",
-        description:
-          "技術資産、顧客基盤、収益性など多角的な観点から企業価値を評価。適正な売却価格の算定をサポートします。",
-      },
-      {
-        title: "マッチング",
-        description:
-          "売り手と買い手のニーズを詳細にヒアリングし、最適なマッチングを実現。双方の利益を最大化する取引を提案します。",
-      },
-      {
-        title: "交渉支援",
-        description:
-          "技術的な観点から適切なアドバイスを提供し、スムーズな交渉をサポート。契約条件の調整からクロージングまで支援します。",
-      },
-      {
-        title: "移行支援",
-        description:
-          "M&A成立後の技術移行、データ移行、チーム統合まで、技術面での移行支援を実施。リスクを最小化しながら進めます。",
-      },
+    features: [
+      "小規模SaaS・個人開発サービスを対象とした仲介・技術評価",
+      "売り手支援：事業・コード評価、譲渡準備、仲介先への接続",
+      "買い手支援：技術デューデリ（コード品質・依存関係・保守リスク）",
+      "エンジニア視点のM&A支援",
     ],
   },
 ];
@@ -149,7 +41,7 @@ export function Services() {
           事業内容
         </h2>
         <p className="mx-auto max-w-2xl text-gray-500 dark:text-gray-500">
-          お客様の課題解決をサポートする4つのサービス
+          信頼性と専門性で、お客様の課題解決をサポートします
         </p>
       </div>
       <div className="space-y-0">
@@ -173,9 +65,18 @@ export function Services() {
                     <h3 className="mb-3 text-2xl font-bold tracking-tight text-gray-500 dark:text-gray-400 sm:text-3xl">
                       {service.title}
                     </h3>
-                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-500 sm:text-lg">
+                    <p className="mb-4 text-base leading-relaxed text-gray-500 dark:text-gray-500 sm:text-lg">
                       {service.description}
                     </p>
+                    {/* 箇条書き */}
+                    <ul className="mb-6 space-y-2 text-left text-sm text-gray-500 dark:text-gray-500 sm:text-base">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <span className="mr-2 mt-1">・</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

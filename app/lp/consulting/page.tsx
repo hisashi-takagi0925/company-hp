@@ -9,27 +9,27 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "システム導入・運用コンサルティング | ライチョウテックパートナーズ株式会社",
   description:
-    "業務効率化・DX推進を目的としたシステム選定・導入・運用のサポート。課題分析から改善提案、ベンダー調整まで一貫して対応します。",
+    "現場で戦うエンジニアによる実践的コンサル。既存業務の分析からDX推進まで、技術的な視点で伴走支援します。",
 };
 
-const layers = [
+const features = [
   {
-    title: "現状分析・課題抽出",
+    title: "既存業務の分析、課題抽出",
     description:
       "業務フローの分析、システム現状の調査を行い、改善すべき課題を明確化。データに基づいた客観的な分析を提供します。",
   },
   {
-    title: "システム選定",
+    title: "システム選定、導入支援、要件定義の整理",
     description:
       "お客様の要件に最適なシステム・ツールを選定。複数ベンダーとの比較検討を行い、コストパフォーマンスの高い提案を実施します。",
   },
   {
-    title: "導入支援",
+    title: "開発ベンダーとの調整・レビュー・品質監修",
     description:
       "導入計画の策定から、データ移行、ユーザー教育まで、スムーズな導入をサポート。リスクを最小化しながら進めます。",
   },
   {
-    title: "運用改善",
+    title: "DX推進、業務効率化の伴走支援",
     description:
       "導入後の運用状況をモニタリングし、継続的な改善提案を実施。システムの効果を最大化するためのサポートを提供します。",
   },
@@ -52,9 +52,9 @@ export default function ConsultingPage() {
               システム導入・運用コンサルティング
             </h1>
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground sm:text-xl">
-              業務効率化・DX推進を目的としたシステム選定・導入・運用のサポート。
+              現場で戦うエンジニアによる実践的コンサル
               <br />
-              課題分析から改善提案、ベンダー調整まで一貫して対応します。
+              既存業務の分析からDX推進まで、技術的な視点で伴走支援します。
             </p>
             <div className="flex justify-center gap-4">
               <Button asChild size="lg" className="text-lg">
@@ -75,22 +75,22 @@ export default function ConsultingPage() {
                 サービス内容
               </h2>
               <p className="mx-auto max-w-2xl text-muted-foreground">
-                コンサルティングにおける4つの主要なプロセス
+                実践的なコンサルティングサービス
               </p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {layers.map((layer, index) => (
+            <div className="grid gap-6 sm:grid-cols-2">
+              {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-xl border-l-4 border-purple-500/30 bg-background/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]"
+                  className="group relative overflow-hidden rounded-xl border-l-4 border-purple-500/30 bg-background/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="relative">
                     <h3 className="mb-3 text-lg font-semibold text-foreground">
-                      {layer.title}
+                      {feature.title}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">
-                      {layer.description}
+                      {feature.description}
                     </p>
                   </div>
                 </div>
@@ -118,4 +118,3 @@ export default function ConsultingPage() {
     </>
   );
 }
-
