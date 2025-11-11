@@ -5,9 +5,10 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Settings, Handshake } from "lucide-react";
 import type { Metadata } from "next";
+import { CATCH_COPY } from "@/app/_constants";
 
 export const metadata: Metadata = {
-  title: "ライチョウテックパートナーズ株式会社 | テクノロジーで、事業を次のステージへ",
+  title: `ライチョウテックパートナーズ株式会社 | ${CATCH_COPY}`,
   description:
     "現場に強いシステムコンサルと、個人開発SaaSに強いM&Aアドバイザリー。長野発の小規模精鋭チームが、お客様の課題解決をサポートします。",
 };
@@ -33,7 +34,7 @@ export default function Home() {
 
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-4xl md:text-5xl lg:text-6xl">
-              テクノロジーで、事業を次のステージへ。
+              {CATCH_COPY}
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               現場に強いシステムコンサルと、個人開発SaaSに強いM&Aアドバイザリー。

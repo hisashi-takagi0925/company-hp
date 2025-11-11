@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CATCH_COPY } from "@/app/_constants";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
               ライチョウテックパートナーズ株式会社
             </h3>
             <p className="text-sm text-gray-300">
-              テクノロジーで、事業を次のステージへ
+              {CATCH_COPY}
             </p>
           </div>
           <div className="text-center md:text-left">

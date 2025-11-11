@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import { CATCH_COPY } from "@/app/_constants";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-sans",
@@ -9,7 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "ライチョウテックパートナーズ株式会社 | テクノロジーで、事業を次のステージへ",
+  title: `ライチョウテックパートナーズ株式会社 | ${CATCH_COPY}`,
   description:
     "システム導入・運用コンサルティング、Webサービス・SaaSのM&Aアドバイザリー。現場で戦うエンジニアによる実践的な支援で、お客様の課題解決をサポートします。",
   keywords: [
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ライチョウテックパートナーズ株式会社",
     description:
-      "テクノロジーで、事業を次のステージへ。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。",
+      `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
     type: "website",
     locale: "ja_JP",
   },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ライチョウテックパートナーズ株式会社",
     description:
-      "テクノロジーで、事業を次のステージへ。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。",
+      `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
   },
 };
 
