@@ -37,17 +37,24 @@ const formSchema = z.object({
     .string()
     .min(1, "件名を選択してください")
     .refine(
-      (val) => ["システム導入・運用コンサルティング相談", "M&Aアドバイザリー相談", "その他"].includes(val),
+      (val) => ["システムコンサル相談", "M&A相談", "その他"].includes(val),
       {
         message: "件名を選択してください",
       }
     ),
-  message: z.string().min(1, "メッセージを入力してください"),
+  message: z
+    .string()
+    .min(1, "メッセージを入力してください")
+    .max(1200, "メッセージは1200字以内で入力してください"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
-export function ContactForm() {
+interface ContactFormProps {
+  onSuccess?: () => void;
+}
+
+export function ContactForm({ onSuccess }: ContactFormProps) {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -62,8 +69,10 @@ export function ContactForm() {
   const onSubmit = async (values: FormValues) => {
     // TODO: 実際の送信処理を実装
     console.log(values);
-    alert("お問い合わせありがとうございます。メールでご連絡いたします。");
     form.reset();
+    if (onSuccess) {
+      onSuccess();
+    }
   };
 
   return (
@@ -130,8 +139,8 @@ export function ContactForm() {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="システム導入・運用コンサルティング相談">システム導入・運用コンサルティング相談</SelectItem>
-                      <SelectItem value="M&Aアドバイザリー相談">M&Aアドバイザリー相談</SelectItem>
+                      <SelectItem value="システムコンサル相談">システムコンサル相談</SelectItem>
+                      <SelectItem value="M&A相談">M&A相談</SelectItem>
                       <SelectItem value="その他">その他</SelectItem>
                     </SelectContent>
                   </Select>
@@ -144,15 +153,21 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>メッセージ本文 *</FormLabel>
+                  <FormLabel>メッセージ本文 *（400〜1200字推奨）</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="お問い合わせ内容をご記入ください"
-                      className="min-h-[120px]"
+                      placeholder="お問い合わせ内容をご記入ください（400〜1200字推奨）"
+                      className="min-h-[200px]"
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
+                  <p className={`text-xs ${(field.value?.length || 0) < 400 && field.value ? "text-orange-600 dark:text-orange-400" : "text-muted-foreground"}`}>
+                    {field.value?.length || 0} / 1200字
+                    {(field.value?.length || 0) > 0 && (field.value?.length || 0) < 400 && (
+                      <span className="ml-2">（400字以上推奨）</span>
+                    )}
+                  </p>
                 </FormItem>
               )}
             />

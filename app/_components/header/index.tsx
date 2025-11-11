@@ -25,28 +25,28 @@ export function Header() {
         </Link>
         <nav className="flex items-center space-x-3 text-xs sm:space-x-4 sm:text-sm md:space-x-6">
           <Link
-            href="/#services"
+            href="/"
             className="font-medium transition-colors hover:text-primary"
           >
-            事業内容
+            TOP
           </Link>
           <Link
-            href="/#mission"
+            href="/services"
             className="font-medium transition-colors hover:text-primary"
           >
-            ミッション
+            Services
           </Link>
           <Link
-            href="/#company"
-            className="hidden font-medium transition-colors hover:text-primary sm:inline-block"
-          >
-            会社概要
-          </Link>
-          <Link
-            href="/#contact"
+            href="/company"
             className="font-medium transition-colors hover:text-primary"
           >
-            お問い合わせ
+            Company
+          </Link>
+          <Link
+            href="/contact"
+            className="font-medium transition-colors hover:text-primary"
+          >
+            Contact
           </Link>
         </nav>
       </div>
