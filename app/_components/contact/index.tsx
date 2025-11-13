@@ -37,7 +37,7 @@ const formSchema = z.object({
     .string()
     .min(1, "件名を選択してください")
     .refine(
-      (val) => ["システムコンサル相談", "M&A相談", "その他"].includes(val),
+      (val) => ["M&A相談", "その他"].includes(val),
       {
         message: "件名を選択してください",
       }
@@ -139,7 +139,6 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="システムコンサル相談">システムコンサル相談</SelectItem>
                       <SelectItem value="M&A相談">M&A相談</SelectItem>
                       <SelectItem value="その他">その他</SelectItem>
                     </SelectContent>

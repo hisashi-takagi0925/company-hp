@@ -2,13 +2,13 @@ import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Settings, Handshake } from "lucide-react";
+import { Handshake } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "事業内容 | ライチョウテックパートナーズ株式会社",
   description:
-    "システム導入・運用コンサルティングとWebサービス・SaaSのM&Aアドバイザリー。現場で戦うエンジニアによる実践的な支援を提供します。",
+    "SaaSのM&A＋再生の専門会社です。技術に強いM&A仲介として、エンジニア視点で小規模SaaS・個人開発サービスを評価し、適切なマッチングを実現します。",
 };
 
 export default function ServicesPage() {
@@ -27,45 +27,8 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Service A: システム導入・運用コンサルティング */}
+        {/* M&Aアドバイザリー */}
         <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl">
-              <div className="mb-8 flex items-center gap-4">
-                <div className="rounded-lg bg-background p-4 shadow-sm">
-                  <Settings className="h-8 w-8 text-muted-foreground" />
-                </div>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  システム導入・運用コンサルティング
-                </h2>
-              </div>
-              <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-                既存業務の可視化から要件定義・ベンダー調整・運用定着まで伴走します。
-              </p>
-              <ul className="mb-8 space-y-3 text-base text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">・</span>
-                  <span>業務整理・課題抽出（現場ヒアリング）</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">・</span>
-                  <span>システム選定／要件定義レビュー</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">・</span>
-                  <span>アーキテクチャ／品質監修</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">・</span>
-                  <span>導入・運用定着支援（SaaS含む）</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Service B: M&Aアドバイザリー */}
-        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-4xl">
               <div className="mb-8 flex items-center gap-4">

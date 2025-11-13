@@ -4,11 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
 export function Header() {
@@ -46,33 +44,14 @@ export function Header() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="h-auto bg-transparent px-0 py-0 font-medium text-foreground hover:bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">
-                Services
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className="min-w-[400px] max-w-[calc(100vw-2rem)] right-0 left-auto">
-                <ul className="p-2">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/lp/consulting"
-                        className="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap"
-                      >
-                        システム導入・運用コンサルティング
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/lp/ma"
-                        className="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground whitespace-nowrap"
-                      >
-                        Webサービス・SaaSのM&Aアドバイザリー
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/lp/ma"
+                  className="font-medium transition-colors hover:text-primary"
+                >
+                  Services
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>

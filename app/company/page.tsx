@@ -18,8 +18,7 @@ const companyInfo = [
   { label: "資本金", value: "1,000,000円" },
   {
     label: "事業内容",
-    value:
-      "システム導入・運用コンサルティング / Webサービス・SaaSのM&Aアドバイザリー",
+    value: "Webサービス・SaaSのM&Aアドバイザリー",
   },
 ];
 

@@ -12,28 +12,25 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: `ライチョウテックパートナーズ株式会社 | ${CATCH_COPY}`,
   description:
-    "システム導入・運用コンサルティング、Webサービス・SaaSのM&Aアドバイザリー。現場で戦うエンジニアによる実践的な支援で、お客様の課題解決をサポートします。",
+    "SaaSのM&A＋再生の専門会社です。技術に強いM&A仲介として、エンジニア視点で小規模SaaS・個人開発サービスを評価し、適切なマッチングを実現します。",
   keywords: [
-    "DXコンサルティング",
-    "システム導入支援",
     "WebサービスM&A",
     "SaaS M&A",
     "技術デューデリ",
+    "個人開発サービス買取",
     "長野県",
     "ライチョウテックパートナーズ",
   ],
   openGraph: {
     title: "ライチョウテックパートナーズ株式会社",
-    description:
-      `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
+    description: `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
     type: "website",
     locale: "ja_JP",
   },
   twitter: {
     card: "summary_large_image",
     title: "ライチョウテックパートナーズ株式会社",
-    description:
-      `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
+    description: `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
   },
 };
 
