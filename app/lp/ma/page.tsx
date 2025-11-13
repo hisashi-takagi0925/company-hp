@@ -231,7 +231,7 @@ export default function MAPage() {
                   テックリードエンジニアによる確かな評価
                 </h2>
                 <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  弊社では、業界歴17年以上で、日本の有名有料企業に多数参画した実績を持つテックリードエンジニアが、最新の技術的な知見およびビジネスとしての価値・健全性をクリアした良質なサービスのみを取り扱っています。
+                  弊社では、業界歴17年以上で、日本の有名・優良・成長企業に多数参画した実績を持つテックリードエンジニアが、最新の技術的な知見およびビジネスとしての価値・健全性をクリアした良質なサービスのみを取り扱っています。
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-3">

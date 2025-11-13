@@ -19,7 +19,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/services"
+                  href="/lp/ma"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   事業内容
