@@ -68,16 +68,44 @@ export default function CompanyPage() {
           </div>
         </section>
 
-        {/* Mission */}
+        {/* Business Track Record */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
-                ミッション
+            <div className="mx-auto max-w-3xl">
+              <h2 className="mb-8 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                業務委託参画実績
               </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                厳しい環境でも成果にこだわる"現場知"で、事業と人を前へ。
-              </p>
+              <div className="rounded-lg border bg-card p-8 shadow-sm">
+                <p className="mb-6 text-center text-sm text-muted-foreground">
+                  敬称略、順不同
+                </p>
+                <ul className="mb-4 space-y-3">
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">株式会社DMM Boost</span>
+                  </li>
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">株式会社カオナビ</span>
+                  </li>
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">株式会社カカクコム</span>
+                  </li>
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">西川計測株式会社</span>
+                  </li>
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">株式会社みらい翻訳</span>
+                  </li>
+                  <li className="flex items-center border-b pb-3 text-base last:border-b-0 last:pb-0">
+                    <span className="font-medium">弥生株式会社</span>
+                  </li>
+                  <li className="flex items-center text-base">
+                    <span className="font-medium">その他</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-muted-foreground">
+                  ※ エージェント経由での参画実績となります。
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -119,4 +147,3 @@ export default function CompanyPage() {
     </>
   );
 }
-
