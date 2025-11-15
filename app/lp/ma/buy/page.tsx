@@ -12,6 +12,8 @@ import {
   Sparkles,
   ArrowRight,
   Search,
+  MessageCircle,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,6 +26,59 @@ export const metadata: Metadata = {
   description:
     "「こんなサービスを買い取りたい」などがあれば、お気軽にお問い合わせください。技術負債・運用コスト・継続性などに対する厳しい査定をクリアした良質なサービスを多数取り扱っています。",
 };
+
+const buySteps = [
+  {
+    step: 1,
+    title: "購入希望のヒアリング",
+    icon: MessageCircle,
+    items: [
+      "購入したいサービス・事業のイメージや目的の確認",
+      "予算・スケジュール・制約条件の確認",
+      "自社プロダクトや事業とのシナジーの確認",
+    ],
+  },
+  {
+    step: 2,
+    title: "候補サービスの探索・一次評価",
+    icon: Search,
+    items: [
+      "市場からの候補サービス探索",
+      "公開情報ベースでの事業・技術面の一次評価",
+      "候補リストのご提示",
+    ],
+  },
+  {
+    step: 3,
+    title: "詳細評価・候補の絞り込み",
+    icon: Code,
+    items: [
+      "技術デューデリジェンス（コード品質・依存関係・保守リスク・移行可否）",
+      "事業デューデリジェンス（収益性・顧客基盤・成長性）",
+      "購入候補の優先順位付け",
+    ],
+  },
+  {
+    step: 4,
+    title: "交渉・条件調整のサポート",
+    icon: Handshake,
+    items: [
+      "適正価格レンジの検討",
+      "条件シミュレーションのサポート",
+      "売り手とのコミュニケーション支援",
+    ],
+  },
+  {
+    step: 5,
+    title: "クロージング・移行支援",
+    icon: Rocket,
+    items: [
+      "M&A後の技術移行計画の策定",
+      "移行チェックリストの作成",
+      "ローンチ後の運用体制構築の相談",
+    ],
+  },
+];
 
 const deliverables = [
   {
@@ -287,8 +342,55 @@ export default function BuyPage() {
           </div>
         </section>
 
-        {/* 買い手にとってのメリット */}
+        {/* 手続きの流れ */}
         <section className="bg-muted/30 py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  手続きの流れ
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  購入のご相談からクロージング・移行までの、おおまかな流れです。
+                </p>
+              </div>
+              <div className="space-y-6">
+                {buySteps.map((step) => (
+                  <div
+                    key={step.step}
+                    className="group rounded-xl border-2 border-border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+                  >
+                    <div className="mb-4 flex items-center gap-4">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground transition-transform group-hover:scale-110">
+                        {step.step}
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="hidden h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:flex">
+                          <step.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <h4 className="text-xl font-semibold">{step.title}</h4>
+                      </div>
+                    </div>
+                    <ul className="ml-14 space-y-2.5">
+                      {step.items.map((item, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-3 text-base text-muted-foreground"
+                        >
+                          <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 買い手にとってのメリット */}
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-4xl">
               <div className="mb-12 text-center">

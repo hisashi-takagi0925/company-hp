@@ -11,6 +11,13 @@ import {
   Sparkles,
   ArrowRight,
   Search,
+  MessageCircle,
+  FileCode2,
+  FileText,
+  Users2,
+  FileSignature,
+  BadgeCheck,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,6 +34,7 @@ const brokerageSteps = [
   {
     step: 1,
     title: "売却希望のヒアリング",
+    icon: MessageCircle,
     items: [
       "サービス概要の確認",
       "売却理由の確認",
@@ -36,6 +44,7 @@ const brokerageSteps = [
   {
     step: 2,
     title: "事業・コード評価",
+    icon: FileCode2,
     items: [
       "技術的な評価（コード品質、アーキテクチャ、依存関係、保守リスク）",
       "事業的な評価（収益性、顧客基盤、成長性）",
@@ -45,6 +54,7 @@ const brokerageSteps = [
   {
     step: 3,
     title: "譲渡準備",
+    icon: FileText,
     items: [
       "ティーザーの作成",
       "情報開示資料（IM）の作成",
@@ -55,21 +65,25 @@ const brokerageSteps = [
   {
     step: 4,
     title: "買い手の探索・マッチング",
+    icon: Users2,
     items: ["適切な買い手の探索", "買い手への提案", "マッチングの調整"],
   },
   {
     step: 5,
     title: "交渉・契約支援",
+    icon: FileSignature,
     items: ["交渉のサポート", "契約条件の調整", "法的アドバイスの提供"],
   },
   {
     step: 6,
     title: "クロージング",
+    icon: BadgeCheck,
     items: ["最終的な契約条件の確定", "クロージング手続きの支援"],
   },
   {
     step: 7,
     title: "移行支援",
+    icon: Rocket,
     items: ["技術移行のサポート", "データ移行の支援", "引き継ぎ業務の支援"],
   },
 ];
@@ -380,7 +394,14 @@ export default function BrokeragePage() {
                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground transition-transform group-hover:scale-110">
                           {step.step}
                         </div>
-                        <h4 className="text-xl font-semibold">{step.title}</h4>
+                        <div className="flex items-center gap-3">
+                          <div className="hidden h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:flex">
+                            <step.icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <h4 className="text-xl font-semibold">
+                            {step.title}
+                          </h4>
+                        </div>
                       </div>
                       <ul className="ml-14 space-y-2.5">
                         {step.items.map((item, index) => (

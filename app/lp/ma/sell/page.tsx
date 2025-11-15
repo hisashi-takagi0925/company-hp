@@ -10,6 +10,11 @@ import {
   Users,
   ArrowRight,
   Sparkles,
+  MessageCircle,
+  FileCode2,
+  BadgeCheck,
+  FileSignature,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,6 +31,7 @@ const purchaseSteps = [
   {
     step: 1,
     title: "初回ヒアリング",
+    icon: MessageCircle,
     items: [
       "サービス概要の確認",
       "売却希望理由の確認",
@@ -35,6 +41,7 @@ const purchaseSteps = [
   {
     step: 2,
     title: "事業・コード評価",
+    icon: FileCode2,
     items: [
       "技術的な評価（コード品質、アーキテクチャ、依存関係）",
       "事業的な評価（収益性、顧客基盤、成長性）",
@@ -44,16 +51,19 @@ const purchaseSteps = [
   {
     step: 3,
     title: "買取の決定",
+    icon: BadgeCheck,
     items: ["弊社での買取可否の判断", "買取条件の提示"],
   },
   {
     step: 4,
     title: "契約・クロージング",
+    icon: FileSignature,
     items: ["契約条件の調整", "デューデリジェンスの実施", "クロージング手続き"],
   },
   {
     step: 5,
     title: "移行支援",
+    icon: Rocket,
     items: ["技術移行のサポート", "データ移行の支援", "引き継ぎ業務の支援"],
   },
 ];
@@ -475,7 +485,14 @@ export default function SellPage() {
                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground transition-transform group-hover:scale-110">
                           {step.step}
                         </div>
-                        <h4 className="text-xl font-semibold">{step.title}</h4>
+                        <div className="flex items-center gap-3">
+                          <div className="hidden h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:flex">
+                            <step.icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <h4 className="text-xl font-semibold">
+                            {step.title}
+                          </h4>
+                        </div>
                       </div>
                       <ul className="ml-14 space-y-2.5">
                         {step.items.map((item, index) => (

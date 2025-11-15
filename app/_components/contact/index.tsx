@@ -152,20 +152,17 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>メッセージ本文 *（400〜1200字推奨）</FormLabel>
+                  <FormLabel>メッセージ本文 *</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="お問い合わせ内容をご記入ください（400〜1200字推奨）"
+                      placeholder="お問い合わせ内容をご記入ください"
                       className="min-h-[200px]"
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
-                  <p className={`text-xs ${(field.value?.length || 0) < 400 && field.value ? "text-orange-600 dark:text-orange-400" : "text-muted-foreground"}`}>
+                  <p className="text-xs text-muted-foreground">
                     {field.value?.length || 0} / 1200字
-                    {(field.value?.length || 0) > 0 && (field.value?.length || 0) < 400 && (
-                      <span className="ml-2">（400字以上推奨）</span>
-                    )}
                   </p>
                 </FormItem>
               )}
