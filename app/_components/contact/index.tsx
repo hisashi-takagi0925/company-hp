@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -36,12 +37,9 @@ const formSchema = z.object({
   subject: z
     .string()
     .min(1, "件名を選択してください")
-    .refine(
-      (val) => ["M&A相談", "その他"].includes(val),
-      {
-        message: "件名を選択してください",
-      }
-    ),
+    .refine((val) => ["M&A相談", "その他"].includes(val), {
+      message: "件名を選択してください",
+    }),
   message: z
     .string()
     .min(1, "メッセージを入力してください")
@@ -55,6 +53,9 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ onSuccess }: ContactFormProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -67,11 +68,36 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
   });
 
   const onSubmit = async (values: FormValues) => {
-    // TODO: 実際の送信処理を実装
-    console.log(values);
-    form.reset();
-    if (onSuccess) {
-      onSuccess();
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "送信に失敗しました");
+      }
+
+      form.reset();
+      if (onSuccess) {
+        onSuccess();
+      }
+    } catch (error) {
+      console.error("送信エラー:", error);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "送信に失敗しました。しばらくしてから再度お試しください。"
+      );
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -167,14 +193,24 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" size="lg">
-              送信
+            {submitError && (
+              <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-200">
+                {submitError}
+              </div>
+            )}
+            <Button
+              type="submit"
+              className="w-full"
+              size="lg"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "送信中..." : "送信"}
             </Button>
           </form>
         </Form>
         <div className="mt-6 text-sm text-muted-foreground">
           <p>※ お問い合わせはメールでの対応となります。</p>
-          <p>※ お問い合わせ先: info@raicho-tech.jp</p>
+          <p>※ お問い合わせ先: info@raicho-tech.com</p>
         </div>
       </CardContent>
     </Card>

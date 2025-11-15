@@ -3,6 +3,8 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
 import { ContactForm } from "@/app/_components/contact";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -29,9 +31,12 @@ export default function ContactPage() {
                   <h2 className="mb-4 text-2xl font-bold">
                     お問い合わせありがとうございます
                   </h2>
-                  <p className="text-muted-foreground">
-                    2営業日以内に返信いたします。
+                  <p className="mb-6 text-muted-foreground">
+                    担当者より、3営業日以内に返信いたします。
                   </p>
+                  <Link href="/">
+                    <Button size="lg">ホームに戻る</Button>
+                  </Link>
                 </div>
               ) : (
                 <ContactForm onSuccess={() => setIsSubmitted(true)} />
