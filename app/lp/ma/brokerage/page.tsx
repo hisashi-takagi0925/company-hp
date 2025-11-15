@@ -1,6 +1,5 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
-import { ContactForm } from "@/app/_components/contact";
 import {
   Handshake,
   CheckCircle2,
@@ -521,18 +520,18 @@ export default function BrokeragePage() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                お問い合わせ
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                Webサービス・SaaSの売買仲介に関するご質問やご相談がございましたら、以下のフォームよりお気軽にお問い合わせください。
-              </p>
-            </div>
-            <ContactForm />
+        {/* CTA Strip */}
+        <section id="contact" className="bg-muted/30 py-24">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              まずは課題の整理からご相談ください
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
+              小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
+            </p>
+            <Button asChild size="lg" className="text-lg px-8">
+              <Link href="/contact">お問い合わせ</Link>
+            </Button>
           </div>
         </section>
       </main>
