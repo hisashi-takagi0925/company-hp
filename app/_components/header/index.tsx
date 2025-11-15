@@ -7,11 +7,13 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-8 w-8">
@@ -44,14 +46,58 @@ export function Header() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/lp/ma"
-                  className="font-medium transition-colors hover:text-primary"
-                >
-                  Services
-                </Link>
-              </NavigationMenuLink>
+              <NavigationMenuTrigger className="font-medium">
+                Services
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white">
+                <ul className="grid min-w-[250px] gap-3 p-4">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/lp/ma/buy"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          買いたい方
+                        </div>
+                        <p className="text-sm leading-snug text-muted-foreground whitespace-nowrap">
+                          Webサービスの調達・評価支援
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/lp/ma/sell"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          売りたい方
+                        </div>
+                        <p className="text-sm leading-snug text-muted-foreground whitespace-nowrap">
+                          Webサービスの売却・買取
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/lp/ma/brokerage"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          仲介希望の方
+                        </div>
+                        <p className="text-sm leading-snug text-muted-foreground whitespace-nowrap">
+                          Webサービスの売買仲介
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
