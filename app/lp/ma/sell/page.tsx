@@ -137,7 +137,7 @@ export default function SellPage() {
                 size="lg"
                 className="text-lg bg-background/90 backdrop-blur-sm px-8"
               >
-                <Link href="/lp/ma">M&Aトップへ戻る</Link>
+                <Link href="/">TOPへ戻る</Link>
               </Button>
             </div>
           </div>

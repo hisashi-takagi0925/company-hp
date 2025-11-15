@@ -4,22 +4,8 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "システム導入・運用コンサルティング",
-    href: "/lp/consulting",
-    icon: Settings,
-    description:
-      "現場で戦うエンジニアによる実践的コンサル。既存業務の分析からDX推進まで、技術的な視点で伴走支援します。",
-    bgColor: "bg-muted/30 dark:bg-muted/20",
-    features: [
-      "既存業務の分析、課題抽出",
-      "システム選定、導入支援、要件定義の整理",
-      "開発ベンダーとの調整・レビュー・品質監修",
-      "DX推進、業務効率化の伴走支援",
-    ],
-  },
-  {
     title: "Webサービス・SaaSのM&Aアドバイザリー",
-    href: "/lp/ma",
+    href: "/#services",
     icon: Handshake,
     description:
       "技術に強いM&A仲介。エンジニア視点で小規模SaaS・個人開発サービスを評価し、適切なマッチングを実現します。",

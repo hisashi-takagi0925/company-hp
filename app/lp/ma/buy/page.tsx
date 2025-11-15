@@ -107,7 +107,7 @@ export default function BuyPage() {
                 size="lg"
                 className="text-lg bg-background/90 backdrop-blur-sm px-8"
               >
-                <Link href="/lp/ma">M&Aトップへ戻る</Link>
+                <Link href="/">TOPへ戻る</Link>
               </Button>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function BuyPage() {
                         技術・チームごと獲得したいCTO/開発責任者
                       </h3>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        技術スタックやコード品質も含めて"中身"を見て判断したい方
+                        技術スタックやコード品質も含めて中身を見て判断したい方
                       </p>
                     </div>
                   </div>
