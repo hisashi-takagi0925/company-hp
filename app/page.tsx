@@ -43,11 +43,8 @@ export default function Home() {
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-4xl md:text-5xl lg:text-6xl">
               {CATCH_COPY}
             </h1>
-            <p className="mx-auto mb-4 max-w-2xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
-              SaaS・Webサービスに特化したM&Aと再生。テックリードエンジニアが、事業とコードの両面から価値を見極めます。
-            </p>
-            <p className="mx-auto mb-10 max-w-2xl text-base text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              小規模SaaS・個人開発サービスの「買いたい」「売りたい」「引き継ぎたい」を支援します。
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
+              テックリードエンジニアが、SaaS・WebサービスのM&Aと再生で小規模SaaS・個人開発サービスの継承を支援します。
             </p>
           </div>
         </section>
