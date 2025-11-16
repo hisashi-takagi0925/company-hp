@@ -47,13 +47,10 @@ export default function Home() {
             <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
               コードまで見るSaaS専門M&Aアドバイザリー
             </p>
-            <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
+            <p className="mx-auto mb-12 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               テックリードエンジニアが、SaaS・Webサービスに特化したM&Aで
               <br className="hidden sm:inline" />
               「小規模SaaS・個人開発サービスの継承と成長」を支援します。
-            </p>
-            <p className="mx-auto mb-8 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              小規模SaaS・個人開発サービスの事業売却・事業買収を、技術DD（デューデリジェンス）と事業DDの両面から支援します。
             </p>
             <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
               <Button
@@ -272,7 +269,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  買収支援／IT企業（従業員50名）
+                  買収支援／IT企業（従業員50名）／BtoB SaaS
                 </p>
                 <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                   「ゼロから作ると1年以上かかると見込んでいた新規プロダクトを、
@@ -285,7 +282,7 @@ export default function Home() {
               </div>
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  売却支援／個人開発SaaSオーナー
+                  売却支援／個人開発者・30代／BtoB予約管理SaaS
                 </p>
                 <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                   「本業の忙しさからサービス継続が難しくなり相談しました。
@@ -298,7 +295,7 @@ export default function Home() {
               </div>
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  仲介・技術DD／M&A仲介会社
+                  仲介・技術DD／M&A仲介会社／SaaS案件全般
                 </p>
                 <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                   「自社だけでは評価が難しいSaaS案件について、技術DDパートナーとしてご一緒しています。

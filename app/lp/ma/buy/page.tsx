@@ -183,25 +183,13 @@ export default function BuyPage() {
               </div>
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
-              Webサービス・SaaSの調達・評価支援
+              Webサービス・SaaSの「安全な」買収・調達支援
             </h1>
             <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
-              SaaSの中身まで見て買う
+              — 技術DD × 事業DDで地雷案件を避ける —
             </p>
-            <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
-              「本当にこのサービスを買って大丈夫か？」
-            </p>
-            <p className="mx-auto mb-6 max-w-3xl text-base text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              テックリードエンジニアが、コードと事業の両面からリスクと価値を見極めます。
-            </p>
-            <p className="mx-auto mb-4 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              <strong className="font-semibold">
-                安全にSaaSを買うための支援
-              </strong>
-              ：技術DD（デューデリジェンス）と事業DDの両面から、買収リスクを最小化し、適正価格での調達を実現します。
-            </p>
-            <p className="mx-auto mb-10 max-w-3xl text-sm text-white/80 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
-              自社プロダクトの拡張、事業シナジー、技術獲得など、多様な目的の調達を支援します。
+            <p className="mx-auto mb-10 max-w-3xl text-lg text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-xl">
+              SaaSの中身（コード）まで徹底的に見て、買って安全な案件だけを紹介します。
             </p>
             <div className="mx-auto mb-10 flex flex-wrap justify-center gap-4 text-sm text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
               <div className="flex items-center gap-2">
