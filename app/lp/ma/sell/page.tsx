@@ -151,7 +151,8 @@ export default function SellPage() {
               テックリードエンジニアが、事業とコードの両面から価値を見極め、納得感のある売却をサポートします。
             </p>
             <p className="mx-auto mb-4 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              <strong className="font-semibold">納得感のある売却支援</strong>：技術DD（デューデリジェンス）と事業DDの両面から適正価格を算定し、スピーディーかつ秘密保持を徹底した売却プロセスを実現します。
+              <strong className="font-semibold">納得感のある売却支援</strong>
+              ：技術DD（デューデリジェンス）と事業DDの両面から適正価格を算定し、スピーディーかつ秘密保持を徹底した売却プロセスを実現します。
             </p>
             <div className="mx-auto mb-10 flex flex-wrap justify-center gap-4 text-sm text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
               <div className="flex items-center gap-2">
@@ -169,7 +170,9 @@ export default function SellPage() {
             </div>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-                <Link href="/contact">SaaS・Webサービスの売却について無料相談する</Link>
+                <Link href="/contact">
+                  SaaS・Webサービスの売却について無料相談する
+                </Link>
               </Button>
               <Button
                 asChild
@@ -359,7 +362,9 @@ export default function SellPage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例1</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例1
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
                     個人開発のタスク管理SaaS売却
@@ -379,7 +384,9 @@ export default function SellPage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例2</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例2
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
                     小規模SaaSの事業売却
@@ -399,7 +406,9 @@ export default function SellPage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例3</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例3
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
                     事業再編に伴うサービス売却
@@ -408,7 +417,9 @@ export default function SellPage() {
                     <li>• 月間ARR: 約150万円</li>
                     <li>• 技術スタック: Python + Django</li>
                     <li>• 売却期間: 相談開始から約2.5ヶ月</li>
-                    <li>• 技術DD結果: アーキテクチャ良好、ユーザー継続性も評価</li>
+                    <li>
+                      • 技術DD結果: アーキテクチャ良好、ユーザー継続性も評価
+                    </li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     会社の事業再編により売却を決意。秘密保持を徹底し、ユーザーに影響を与えることなくスムーズに売却が完了しました。
@@ -760,7 +771,9 @@ export default function SellPage() {
                   </ul>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">技術・運営面の例</h3>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    技術・運営面の例
+                  </h3>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>・技術スタック／アーキテクチャのモダンさ・拡張性</li>
                     <li>・テスト実装・監視体制・セキュリティ</li>
@@ -794,7 +807,9 @@ export default function SellPage() {
                 <table className="w-full text-sm">
                   <thead className="bg-muted/60">
                     <tr>
-                      <th className="px-6 py-3 text-left font-semibold">項目</th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        項目
+                      </th>
                       <th className="px-6 py-3 text-left font-semibold">
                         目安
                       </th>
@@ -812,14 +827,18 @@ export default function SellPage() {
                       </td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-6 py-3 font-medium">簡易評価・価格レンジ提示</td>
+                      <td className="px-6 py-3 font-medium">
+                        簡易評価・価格レンジ提示
+                      </td>
                       <td className="px-6 py-3">無料〜20万円（税込）目安</td>
                       <td className="px-6 py-3">
                         売上規模やソースコードの開示範囲により変動します。
                       </td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-6 py-3 font-medium">M&Aアドバイザリー（仲介・FA）</td>
+                      <td className="px-6 py-3 font-medium">
+                        M&Aアドバイザリー（仲介・FA）
+                      </td>
                       <td className="px-6 py-3">
                         成約金額の3〜5%程度＋最低報酬（要相談）
                       </td>
@@ -831,7 +850,8 @@ export default function SellPage() {
                 </table>
               </div>
               <p className="mt-4 text-xs text-muted-foreground">
-                ※ 上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
+                ※
+                上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
               </p>
             </div>
           </div>
@@ -961,7 +981,9 @@ export default function SellPage() {
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
             <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-              <Link href="/contact">SaaS・Webサービスの売却について無料相談する</Link>
+              <Link href="/contact">
+                SaaS・Webサービスの売却について無料相談する
+              </Link>
             </Button>
           </div>
         </section>
