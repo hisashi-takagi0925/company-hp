@@ -183,13 +183,14 @@ export default function BuyPage() {
               </div>
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
-              Webサービス・SaaSの「安全な」買収・調達支援
+              SaaS・Webサービスを買いたい方へ
             </h1>
             <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
-              — 技術DD × 事業DDで地雷案件を避ける —
+              技術と事業の両面から、買収をサポートします
             </p>
             <p className="mx-auto mb-10 max-w-3xl text-lg text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-xl">
-              SaaSの中身（コード）まで徹底的に見て、買って安全な案件だけを紹介します。
+              テックリードエンジニアがSaaSの中身（コード）まで確認し、
+              安心して買えるサービスだけをご提案します。
             </p>
             <div className="mx-auto mb-10 flex flex-wrap justify-center gap-4 text-sm text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
               <div className="flex items-center gap-2">

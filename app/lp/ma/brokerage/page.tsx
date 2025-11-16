@@ -159,10 +159,10 @@ export default function BrokeragePage() {
               </div>
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
-              Webサービス・SaaSの売買仲介
+              SaaS・Webサービスの仲介パートナーへ
             </h1>
             <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
-              技術に強いM&A仲介パートナー
+              案件の技術面を、テックリードが一緒に支えます
             </p>
             <p className="mx-auto mb-6 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               売り手と買い手の適切なマッチングを実現し、スムーズな取引をサポートします。

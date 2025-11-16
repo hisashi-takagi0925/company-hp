@@ -139,10 +139,10 @@ export default function SellPage() {
               </div>
             </div>
             <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
-              Webサービス・SaaSの売却・買取
+              SaaS・Webサービスを売りたい方へ
             </h1>
             <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
-              技術負債ごと受け止める売却支援
+              サービスを大切にしてくれる次の担い手を一緒に探します
             </p>
             <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               「このサービスを、きちんと引き継いでくれる人に託したい。」

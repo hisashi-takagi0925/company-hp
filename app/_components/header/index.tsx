@@ -100,6 +100,60 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-medium">
+                Knowledge
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white">
+                <ul className="grid min-w-[260px] gap-3 p-4">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/knowledge/saas-tech-dd"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          SaaSの技術DDで見る5つのポイント
+                        </div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          ソースコードやインフラをどう評価するかの考え方
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/knowledge/saas-valuation-axes"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          小規模SaaSの価格レンジを考える3つの軸
+                        </div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          ARR・解約率・技術負債をどう組み合わせて見るか
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/knowledge/tech-debt-and-ma"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none whitespace-nowrap">
+                          技術負債と事業価値のバランスを取るフレームワーク
+                        </div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          「全部リプレイス」でも「放置」でもない現実的な打ち手
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   href="/company"
