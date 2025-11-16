@@ -27,11 +27,22 @@ export const metadata: Metadata = {
     description: `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
     type: "website",
     locale: "ja_JP",
+    url: "https://raicho-tech.jp",
+    siteName: "ライチョウテックパートナーズ株式会社",
+    images: [
+      {
+        url: "https://raicho-tech.jp/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ライチョウテックパートナーズ株式会社 - SaaS・Webサービス特化のM&Aアドバイザリー",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ライチョウテックパートナーズ株式会社",
     description: `${CATCH_COPY}。柔軟に、誠実に、確かな技術で支えるテクノロジーパートナー。`,
+    images: ["https://raicho-tech.jp/og-image.jpg"],
   },
 };
 
