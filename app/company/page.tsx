@@ -2,6 +2,7 @@ import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -32,6 +33,13 @@ export default function CompanyPage() {
     <>
       <Header />
       <main>
+        {/* Breadcrumbs */}
+        <section className="border-b bg-muted/30 py-4">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs items={[{ label: "会社概要" }]} />
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">

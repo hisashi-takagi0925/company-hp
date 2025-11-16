@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -91,6 +92,30 @@ export default function SellPage() {
     <>
       <Header />
       <main>
+        {/* Breadcrumbs */}
+        <section className="border-b bg-muted/30 py-4">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs
+              items={[
+                { label: "事業内容", href: "/#services" },
+                { label: "売りたい方" },
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Page Label */}
+        <section className="bg-primary/5 py-3">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-medium text-primary sm:text-base">
+              <span className="inline-flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                このページは「SaaS・Webサービスを売りたい個人・企業」向けです
+              </span>
+            </p>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden py-20">
           {/* 背景画像 */}
@@ -122,6 +147,9 @@ export default function SellPage() {
             <p className="mx-auto mb-6 max-w-3xl text-base text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
               テックリードエンジニアが、事業とコードの両面から価値を見極め、納得感のある売却をサポートします。
             </p>
+            <p className="mx-auto mb-4 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
+              <strong className="font-semibold">納得感のある売却支援</strong>：技術DD（デューデリジェンス）と事業DDの両面から適正価格を算定し、スピーディーかつ秘密保持を徹底した売却プロセスを実現します。
+            </p>
             <div className="mx-auto mb-10 flex flex-wrap justify-center gap-4 text-sm text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4" />
@@ -137,14 +165,14 @@ export default function SellPage() {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="text-lg px-8">
-                <Link href="/contact">お問い合わせ</Link>
+              <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+                <Link href="/contact">SaaS・Webサービスの売却について相談する</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg bg-background/90 backdrop-blur-sm px-8"
+                className="min-h-[48px] text-lg bg-background/90 backdrop-blur-sm px-8"
               >
                 <Link href="/">TOPへ戻る</Link>
               </Button>
@@ -307,6 +335,99 @@ export default function SellPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 売却事例 */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  SaaS・Webサービスの売却事例
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  技術DDと事業DDの両面から適正価格を算定し、スピーディーな売却を実現した事例をご紹介します
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例1</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    個人開発のタスク管理SaaS売却
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約50万円</li>
+                    <li>• 技術スタック: Next.js + TypeScript</li>
+                    <li>• 売却期間: 相談開始から約2ヶ月</li>
+                    <li>• 技術DD結果: コード品質良好、適正価格で評価</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    個人開発者が本業との両立が難しくなり売却を決意。技術負債が少なく、適正価格でスピーディーに売却が完了しました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例2</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    小規模SaaSの事業売却
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約200万円</li>
+                    <li>• 技術スタック: Ruby on Rails + React</li>
+                    <li>• 売却期間: 相談開始から約3ヶ月</li>
+                    <li>• 技術DD結果: 一部技術負債あり、改善計画を提示</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    技術負債があったものの、改善可能性を評価し適正価格で売却。買い手企業は改善計画を踏まえて安心して買収を決断しました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例3</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    事業再編に伴うサービス売却
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約150万円</li>
+                    <li>• 技術スタック: Python + Django</li>
+                    <li>• 売却期間: 相談開始から約2.5ヶ月</li>
+                    <li>• 技術DD結果: アーキテクチャ良好、ユーザー継続性も評価</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    会社の事業再編により売却を決意。秘密保持を徹底し、ユーザーに影響を与えることなくスムーズに売却が完了しました。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA - 中盤 */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
+              SaaS・Webサービスの売却について相談する
+            </h2>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
+              技術DDと事業DDの両面から適正価格を算定し、スピーディーな売却を実現します。まずは無料相談から。
+            </p>
+            <Button asChild size="lg" className="min-h-[48px] text-base px-8">
+              <Link href="/contact">無料相談はこちら</Link>
+            </Button>
           </div>
         </section>
 
@@ -781,8 +902,54 @@ export default function SellPage() {
           </div>
         </section>
 
+        {/* 関連リンク */}
+        <section className="bg-muted/30 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                関連ページ
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link
+                  href="/lp/ma/buy"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    買いたい方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    SaaS・Webサービスの買収支援について
+                  </p>
+                </Link>
+                <Link
+                  href="/lp/ma/brokerage"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    仲介希望の方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    M&A仲介・技術DDパートナーについて
+                  </p>
+                </Link>
+                <Link
+                  href="/company"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    会社概要
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    代表プロフィール・ミッション・バリュー
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Strip */}
-        <section id="contact" className="bg-muted/30 py-24">
+        <section id="contact" className="bg-primary/5 py-24">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
               まずは課題の整理からご相談ください
@@ -790,8 +957,8 @@ export default function SellPage() {
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
-            <Button asChild size="lg" className="text-lg px-8">
-              <Link href="/contact">お問い合わせ</Link>
+            <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+              <Link href="/contact">SaaS・Webサービスの売却について相談する</Link>
             </Button>
           </div>
         </section>

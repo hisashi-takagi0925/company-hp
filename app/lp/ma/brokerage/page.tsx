@@ -21,6 +21,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -111,6 +112,30 @@ export default function BrokeragePage() {
     <>
       <Header />
       <main>
+        {/* Breadcrumbs */}
+        <section className="border-b bg-muted/30 py-4">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs
+              items={[
+                { label: "事業内容", href: "/#services" },
+                { label: "仲介希望の方" },
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Page Label */}
+        <section className="bg-primary/5 py-3">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-medium text-primary sm:text-base">
+              <span className="inline-flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                このページは「M&A仲介・技術DDパートナーを探している企業」向けです
+              </span>
+            </p>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden py-20">
           {/* 背景画像 */}
@@ -136,14 +161,17 @@ export default function BrokeragePage() {
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
               Webサービス・SaaSの売買仲介
             </h1>
-            <p className="mx-auto mb-10 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
+            <p className="mx-auto mb-6 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               売り手と買い手の適切なマッチングを実現し、スムーズな取引をサポートします。
               <br />
               テックリードエンジニアが、コードと事業の両面からリスクと価値を判断します。
             </p>
+            <p className="mx-auto mb-10 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
+              <strong className="font-semibold">技術に強い共同パートナー</strong>：M&A仲介会社やFA（ファイナンシャルアドバイザー）と協業し、技術DD（デューデリジェンス）と事業DDの両面から評価を提供します。
+            </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="text-lg px-8">
-                <Link href="/contact">お問い合わせ</Link>
+              <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+                <Link href="/contact">技術に強いパートナーとの協業について相談する</Link>
               </Button>
               <Button
                 asChild
@@ -312,6 +340,99 @@ export default function BrokeragePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 仲介・技術DDパートナー事例 */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  M&A仲介・技術DDパートナー事例
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  M&A仲介会社やFAと協業し、技術DDと事業DDの両面から評価を提供した事例をご紹介します
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例1</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    M&A仲介会社との技術DD協業
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 案件規模: 月間ARR約300万円</li>
+                    <li>• 技術スタック: React + Node.js</li>
+                    <li>• 協業期間: 約1.5ヶ月</li>
+                    <li>• 技術DD結果: コード品質・アーキテクチャを評価</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    M&A仲介会社が技術評価に不安を抱えていた案件に対し、技術DDを実施。コード品質とアーキテクチャを評価し、適正価格での成約を支援しました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例2</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    FAとの共同アドバイザリー
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 案件規模: 月間ARR約500万円</li>
+                    <li>• 技術スタック: Python + Django + Vue.js</li>
+                    <li>• 協業期間: 約2ヶ月</li>
+                    <li>• 技術DD結果: 技術負債を評価、改善計画を提示</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    FAが事業面を担当し、当社が技術面を担当。技術負債の程度を正確に評価し、改善計画を提示することで、買い手企業の不安を解消しました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">事例3</span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    小規模SaaSの技術評価支援
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 案件規模: 月間ARR約100万円</li>
+                    <li>• 技術スタック: Next.js + TypeScript</li>
+                    <li>• 協業期間: 約1ヶ月</li>
+                    <li>• 技術DD結果: コード品質良好、適正評価を実現</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    小規模SaaSのM&Aにおいて、技術評価が不十分で適正価格がつかない懸念があった案件。技術DDを実施し、コード品質を評価することで適正価格での成約を実現しました。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA - 中盤 */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
+              技術に強いパートナーとの協業について相談する
+            </h2>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
+              M&A仲介会社やFAと協業し、技術DDと事業DDの両面から評価を提供します。まずは無料相談から。
+            </p>
+            <Button asChild size="lg" className="min-h-[48px] text-base px-8">
+              <Link href="/contact">無料相談はこちら</Link>
+            </Button>
           </div>
         </section>
 
@@ -663,8 +784,54 @@ export default function BrokeragePage() {
           </div>
         </section>
 
+        {/* 関連リンク */}
+        <section className="bg-muted/30 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                関連ページ
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link
+                  href="/lp/ma/buy"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    買いたい方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    SaaS・Webサービスの買収支援について
+                  </p>
+                </Link>
+                <Link
+                  href="/lp/ma/sell"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    売りたい方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    SaaS・Webサービスの売却支援について
+                  </p>
+                </Link>
+                <Link
+                  href="/company"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    会社概要
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    代表プロフィール・ミッション・バリュー
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Strip */}
-        <section id="contact" className="bg-muted/30 py-24">
+        <section id="contact" className="bg-primary/5 py-24">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
               まずは課題の整理からご相談ください
@@ -672,8 +839,8 @@ export default function BrokeragePage() {
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
-            <Button asChild size="lg" className="text-lg px-8">
-              <Link href="/contact">お問い合わせ</Link>
+            <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+              <Link href="/contact">技術に強いパートナーとの協業について相談する</Link>
             </Button>
           </div>
         </section>

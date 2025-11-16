@@ -44,16 +44,19 @@ export default function Home() {
               <br className="hidden sm:inline" />
               小規模SaaS専門のアドバイザリー
             </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
+            <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               テックリードエンジニアが、SaaS・Webサービスに特化したM&Aで
               <br className="hidden sm:inline" />
               「小規模SaaS・個人開発サービスの継承と成長」を支援します。
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
+            <p className="mx-auto mb-8 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
+              小規模SaaS・個人開発サービスの事業売却・事業買収を、技術DD（デューデリジェンス）と事業DDの両面から支援します。
+            </p>
+            <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
               <Button
                 asChild
                 size="lg"
-                className="min-w-[220px] text-base font-semibold shadow-lg"
+                className="min-h-[48px] min-w-[220px] text-base font-semibold shadow-lg"
               >
                 <Link href="/contact">無料相談はこちら</Link>
               </Button>
@@ -61,9 +64,35 @@ export default function Home() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="min-w-[220px] border-white/70 bg-black/20 text-base font-semibold text-white backdrop-blur hover:bg-white/10"
+                className="min-h-[48px] min-w-[220px] border-white/70 bg-black/20 text-base font-semibold text-white backdrop-blur hover:bg-white/10"
               >
                 <Link href="#services">サービス内容を見る</Link>
+              </Button>
+            </div>
+            <div className="mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <Button
+                asChild
+                variant="outline"
+                size="default"
+                className="min-h-[44px] border-white/50 bg-white/10 text-sm font-medium text-white backdrop-blur hover:bg-white/20 sm:text-base"
+              >
+                <Link href="/lp/ma/sell">売りたい方はこちら</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="default"
+                className="min-h-[44px] border-white/50 bg-white/10 text-sm font-medium text-white backdrop-blur hover:bg-white/20 sm:text-base"
+              >
+                <Link href="/lp/ma/buy">買いたい方はこちら</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="default"
+                className="min-h-[44px] border-white/50 bg-white/10 text-sm font-medium text-white backdrop-blur hover:bg-white/20 sm:text-base"
+              >
+                <Link href="/lp/ma/brokerage">仲介希望の方はこちら</Link>
               </Button>
             </div>
           </div>

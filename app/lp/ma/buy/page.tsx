@@ -17,6 +17,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -103,6 +104,30 @@ export default function BuyPage() {
     <>
       <Header />
       <main>
+        {/* Breadcrumbs */}
+        <section className="border-b bg-muted/30 py-4">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs
+              items={[
+                { label: "事業内容", href: "/#services" },
+                { label: "買いたい方" },
+              ]}
+            />
+          </div>
+        </section>
+
+        {/* Page Label */}
+        <section className="bg-primary/5 py-3">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-medium text-primary sm:text-base">
+              <span className="inline-flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                このページは「SaaS・Webサービスを買いたい企業・個人」向けです
+              </span>
+            </p>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden py-20">
           {/* 背景画像 */}
@@ -134,6 +159,12 @@ export default function BuyPage() {
             <p className="mx-auto mb-6 max-w-3xl text-base text-white/90 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
               テックリードエンジニアが、コードと事業の両面からリスクと価値を見極めます。
             </p>
+            <p className="mx-auto mb-4 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
+              <strong className="font-semibold">
+                安全にSaaSを買うための支援
+              </strong>
+              ：技術DD（デューデリジェンス）と事業DDの両面から、買収リスクを最小化し、適正価格での調達を実現します。
+            </p>
             <p className="mx-auto mb-10 max-w-3xl text-sm text-white/80 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-base">
               自社プロダクトの拡張、事業シナジー、技術獲得など、多様な目的の調達を支援します。
             </p>
@@ -152,14 +183,16 @@ export default function BuyPage() {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="text-lg px-8">
-                <Link href="/contact">お問い合わせ</Link>
+              <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+                <Link href="/contact">
+                  SaaS・Webサービスの買収について相談する
+                </Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg bg-background/90 backdrop-blur-sm px-8"
+                className="min-h-[48px] text-lg bg-background/90 backdrop-blur-sm px-8"
               >
                 <Link href="/">TOPへ戻る</Link>
               </Button>
@@ -195,8 +228,8 @@ export default function BuyPage() {
                   自社プロダクトの拡張から新規事業の足掛かりまで、様々な目的での調達をサポートします
                 </p>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+              <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm transition-all hover:border-primary/50">
                   <div className="mb-4 flex items-start gap-4">
                     <div className="mt-1 flex-shrink-0 rounded-lg bg-primary/10 p-2">
                       <Users className="h-5 w-5 text-primary" />
@@ -258,6 +291,107 @@ export default function BuyPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 買収事例 */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  SaaS・Webサービスの買収事例
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  技術DDと事業DDの両面から評価し、安全な買収を実現した事例をご紹介します
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例1
+                    </span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    個人開発のタスク管理SaaS買収
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約50万円</li>
+                    <li>• 技術スタック: Next.js + TypeScript + PostgreSQL</li>
+                    <li>• 成約期間: 相談開始から約2ヶ月</li>
+                    <li>
+                      • 技術DD結果: コード品質良好、テストカバレッジ80%以上
+                    </li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    買い手企業は既存プロダクトの機能拡張を目的として購入。技術負債が少なく、買収後すぐに統合開発を開始できました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例2
+                    </span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    小規模SaaSの事業買収
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約200万円</li>
+                    <li>• 技術スタック: Ruby on Rails + React</li>
+                    <li>• 成約期間: 相談開始から約3ヶ月</li>
+                    <li>• 技術DD結果: 一部技術負債あり、移行計画を策定</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    技術負債の程度を正確に評価し、買収後の改善計画を事前に策定。買い手企業は安心して買収を決断できました。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="rounded-lg bg-primary/10 p-2">
+                      <Code className="h-5 w-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      事例3
+                    </span>
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    技術チームごとの買収
+                  </h3>
+                  <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
+                    <li>• 月間ARR: 約150万円</li>
+                    <li>• 技術スタック: Python + Django + Vue.js</li>
+                    <li>• 成約期間: 相談開始から約4ヶ月</li>
+                    <li>• 技術DD結果: アーキテクチャ良好、チーム体制も評価</li>
+                  </ul>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    コード品質だけでなく、開発チームの体制やスキルセットも評価。買い手企業は技術チームごと獲得し、即戦力として活用しています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA - 中盤 */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
+              SaaS・Webサービスの買収について相談する
+            </h2>
+            <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
+              技術リスクを見極め、適正価格での買収を実現します。まずは無料相談から。
+            </p>
+            <Button asChild size="lg" className="min-h-[48px] text-base px-8">
+              <Link href="/contact">無料相談はこちら</Link>
+            </Button>
           </div>
         </section>
 
@@ -767,8 +901,54 @@ export default function BuyPage() {
           </div>
         </section>
 
+        {/* 関連リンク */}
+        <section className="bg-muted/30 py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                関連ページ
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link
+                  href="/lp/ma/sell"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    売りたい方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    SaaS・Webサービスの売却支援について
+                  </p>
+                </Link>
+                <Link
+                  href="/lp/ma/brokerage"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    仲介希望の方
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    M&A仲介・技術DDパートナーについて
+                  </p>
+                </Link>
+                <Link
+                  href="/company"
+                  className="group rounded-lg border-2 border-border bg-background p-4 transition-all hover:border-primary/50 hover:shadow-md"
+                >
+                  <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary">
+                    会社概要
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    代表プロフィール・ミッション・バリュー
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Strip */}
-        <section id="contact" className="bg-muted/30 py-24">
+        <section id="contact" className="bg-primary/5 py-24">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
               まずは課題の整理からご相談ください
@@ -776,8 +956,10 @@ export default function BuyPage() {
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
-            <Button asChild size="lg" className="text-lg px-8">
-              <Link href="/contact">お問い合わせ</Link>
+            <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
+              <Link href="/contact">
+                SaaS・Webサービスの買収について相談する
+              </Link>
             </Button>
           </div>
         </section>
