@@ -369,6 +369,85 @@ export default function BrokeragePage() {
           </div>
         </section>
 
+        {/* 他社仲介との比較（イメージ） */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-8 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  他社仲介との比較
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  一般的なM&A仲介との違いを、SaaS・Webサービス案件における観点で整理したイメージです。
+                  実際の対応内容は案件ごとに異なりますが、「どこが得意か」の比較としてご覧ください。
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/60">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold">項目</th>
+                      <th className="px-4 py-3 text-left font-semibold">
+                        一般的な大手仲介
+                      </th>
+                      <th className="px-4 py-3 text-left font-semibold">
+                        汎用M&A仲介
+                      </th>
+                      <th className="px-4 py-3 text-left font-semibold">
+                        ライチョウテック
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 font-medium">SaaS・Webサービス専門性</td>
+                      <td className="px-4 py-3">幅広い業種をカバー</td>
+                      <td className="px-4 py-3">IT案件も扱うが専門ではない</td>
+                      <td className="px-4 py-3">
+                        SaaS・Webサービス特化。小規模SaaS・個人開発も対応
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 font-medium">技術DD（コード・インフラ評価）</td>
+                      <td className="px-4 py-3">外部専門家にスポット依頼することが多い</td>
+                      <td className="px-4 py-3">実施しない or 限定的</td>
+                      <td className="px-4 py-3">
+                        テックリードが直接実施。コードレビュー〜移行計画まで一気通貫
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 font-medium">小規模案件（数千万円以下）の対応</td>
+                      <td className="px-4 py-3">優先度が低くなりがち</td>
+                      <td className="px-4 py-3">案件によって対応可否が分かれる</td>
+                      <td className="px-4 py-3">
+                        小規模SaaS・個人開発サービスを主な対象として歓迎
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 font-medium">スピードと丁寧さのバランス</td>
+                      <td className="px-4 py-3">スピード重視になりやすい</td>
+                      <td className="px-4 py-3">担当者に依存</td>
+                      <td className="px-4 py-3">
+                        技術・事業両面の整理を行いながら、無理のないスケジュールで進行
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 font-medium">サポート範囲</td>
+                      <td className="px-4 py-3">条件交渉〜契約までが中心</td>
+                      <td className="px-4 py-3">
+                        取引前後のフォローは限定的なことが多い
+                      </td>
+                      <td className="px-4 py-3">
+                        技術DD・条件設計・移行計画・PMI初期フェーズまで伴走可能
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Webサービスの売買仲介 */}
         <section className="py-24">
           <div className="container mx-auto px-4">
@@ -448,6 +527,70 @@ export default function BrokeragePage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 手数料・費用体系 */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-8 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  手数料・費用体系
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  共同での仲介・技術DDパートナーとして関わる場合の、一般的な手数料イメージです。
+                  実際の条件は案件内容や役割分担に応じて個別にご相談させていただきます。
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/60">
+                    <tr>
+                      <th className="px-6 py-3 text-left font-semibold">項目</th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        目安
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        備考
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">初回相談・案件相談</td>
+                      <td className="px-6 py-3">無料</td>
+                      <td className="px-6 py-3">
+                        仲介・アドバイザーの方からの案件相談や技術的な論点のご相談は、初回無料でお受けします。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">技術DDレポート</td>
+                      <td className="px-6 py-3">
+                        30〜80万円（税込）目安／案件
+                      </td>
+                      <td className="px-6 py-3">
+                        対象サービスの規模（画面数・機能数・コード量）に応じて変動します。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">
+                        売買仲介における成功報酬（当社取り分）
+                      </td>
+                      <td className="px-6 py-3">
+                        成約金額の一部（共同スキームに応じて協議）
+                      </td>
+                      <td className="px-6 py-3">
+                        既存の報酬スキームを尊重しつつ、共同でのレベニューシェア等を検討させていただきます。
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground">
+                ※ 上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
+              </p>
             </div>
           </div>
         </section>

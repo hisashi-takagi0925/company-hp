@@ -9,7 +9,7 @@ if (process.env.SENDGRID_API_KEY) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, company, email, subject, message } = body;
+    const { name, company, email, phone, subject, message } = body;
 
     // バリデーション
     if (!name || !email || !subject || !message) {
@@ -98,6 +98,9 @@ ${company || "未入力"}
 【メールアドレス】
 ${email}
 
+【電話番号】
+${phone || "未入力"}
+
 【件名】
 ${subject}
 
@@ -150,6 +153,10 @@ User-Agent: ${userAgent}
       <div class="field">
         <div class="label">メールアドレス</div>
         <div class="value">${email}</div>
+      </div>
+      <div class="field">
+        <div class="label">電話番号</div>
+        <div class="value">${phone || "未入力"}</div>
       </div>
       <div class="field">
         <div class="label">件名</div>

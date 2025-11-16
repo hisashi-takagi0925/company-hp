@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "会社概要 | ライチョウテックパートナーズ株式会社",
   description:
-    "ライチョウテックパートナーズ株式会社の会社概要。長野発の小規模精鋭チームが、厳しい環境でも成果にこだわる「現場知」で事業と人を前へ導きます。",
+    "ライチョウテックパートナーズ株式会社の会社概要。SaaS・Webサービス特化のM&Aアドバイザリーとして、小規模SaaS・個人開発サービスの事業売却・事業買収・仲介を、テックリードエンジニアが技術DDと事業DDの両面から支援します。",
 };
 
 const companyInfo = [
@@ -63,6 +63,83 @@ export default function CompanyPage() {
                     ))}
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 代表プロフィール */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                代表プロフィール
+              </h2>
+              <div className="rounded-lg border bg-card p-8 shadow-sm">
+                <p className="mb-2 text-sm font-semibold text-primary">
+                  代表取締役 / テックリードエンジニア
+                </p>
+                <p className="mb-4 text-lg font-bold">高木 悠</p>
+                <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    Webエンジニアとしてキャリアをスタートし、スタートアップから上場企業まで
+                    10年以上にわたりSaaS・Webサービスの開発・グロースに従事。
+                    フロントエンド・バックエンド・インフラまで横断的に関わるテックリードとして、
+                    プロダクトの立ち上げから数十万ユーザー規模への拡大までを経験。
+                  </p>
+                  <p>
+                    その過程で、「良いサービスなのに承継されずに畳まれてしまう」「技術負債が理由で本来の価値より安く評価される」
+                    といった場面を数多く目にしたことから、SaaS・Webサービスに特化したM&Aアドバイザリー事業を立ち上げる。
+                  </p>
+                  <p>
+                    現在は、小規模SaaS・個人開発サービスを中心に、
+                    事業オーナー・買い手企業・仲介パートナーの三者が納得できる継承を実現するため、
+                    技術DD（ソースコード・アーキテクチャ・インフラ）と事業DD（売上・解約率・LTVなど）を一体で行う支援を提供している。
+                  </p>
+                  <p>
+                    専門領域は、SaaSアーキテクチャ設計、技術デューデリジェンス、PMF後のグロース支援、
+                    M&amp;A後のPMI初期フェーズにおける技術統合・チーム立ち上げなど。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ミッション・バリュー */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+                ミッション・バリュー
+              </h2>
+              <div className="space-y-6 rounded-lg border bg-card p-8 shadow-sm">
+                <div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    ミッション：良いWebサービスが、きちんと次の担い手につながる世界をつくる
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    技術負債やオーナーの事情によって、まだ価値のあるサービスが静かに終了してしまうケースを減らし、
+                    作り手・送り手・受け手の三者が納得できる継承を実現することを目指しています。
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-lg font-semibold">バリュー</h3>
+                  <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                    <li>
+                      ・<span className="font-semibold">コードと事業の両方を見る</span>：
+                      売上やKPIだけでなく、ソースコードやインフラも含めて総合的に評価します。
+                    </li>
+                    <li>
+                      ・<span className="font-semibold">小さなSaaSも真剣に扱う</span>：
+                      月商規模にかかわらず、プロダクトとユーザーに敬意を持って向き合います。
+                    </li>
+                    <li>
+                      ・<span className="font-semibold">オーナーの言語で話す</span>：
+                      エンジニア・経営者・投資家、それぞれの立場の言葉を翻訳しながらコミュニケーションします。
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

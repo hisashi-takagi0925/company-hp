@@ -31,9 +31,23 @@ export default function ContactPage() {
                   <h2 className="mb-4 text-2xl font-bold">
                     お問い合わせありがとうございます
                   </h2>
-                  <p className="mb-6 text-muted-foreground">
-                    担当者より、3営業日以内に返信いたします。
-                  </p>
+                  <div className="mb-6 space-y-2 text-sm text-muted-foreground">
+                    <p>担当者より、3営業日以内に返信いたします。</p>
+                    <div className="mx-auto max-w-md text-left text-xs leading-relaxed text-muted-foreground">
+                      <p className="font-semibold text-foreground">
+                        送信後の流れ
+                      </p>
+                      <ol className="mt-1 list-inside list-decimal space-y-1">
+                        <li>担当者がお問い合わせ内容を確認します。</li>
+                        <li>
+                          1〜3営業日以内に、メールにてご返信・日程調整のご連絡を差し上げます。
+                        </li>
+                        <li>
+                          オンライン（または対面）での初回相談にて、現状やご希望を詳しくお伺いします。
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
                   <Link href="/">
                     <Button size="lg">ホームに戻る</Button>
                   </Link>

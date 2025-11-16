@@ -543,6 +543,176 @@ export default function SellPage() {
           </div>
         </section>
 
+        {/* 売却の成功事例（サンプル） */}
+        <section className="bg-muted/30 py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto mb-12 max-w-4xl text-center">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                売却の成功事例イメージ
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
+                実際の案件では守秘義務の関係で詳細は開示できませんが、
+                よくあるケースをイメージしやすいように加工した事例をご紹介します。
+              </p>
+            </div>
+            <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+              <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
+                  事例01／個人開発SaaSの事業売却
+                </p>
+                <h3 className="mb-3 text-lg font-bold">
+                  月商80〜100万円規模のBtoB予約管理SaaS
+                </h3>
+                <ul className="mb-3 space-y-1 text-sm text-muted-foreground">
+                  <li>・開発者1名による個人開発プロダクト</li>
+                  <li>・顧客数：約80社／解約率：1〜2%台</li>
+                  <li>・相談〜クロージング：約3ヶ月</li>
+                </ul>
+                <p className="mt-auto text-sm text-muted-foreground">
+                  本業が多忙になり開発時間が取れなくなったオーナーからのご相談。
+                  コードと事業をセットで評価し、同業他社への引き継ぎでユーザーも継続利用できる形で成約しました。
+                </p>
+              </div>
+              <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
+                  事例02／事業再編に伴うサービス売却
+                </p>
+                <h3 className="mb-3 text-lg font-bold">
+                  社内新規事業として立ち上げた業務支援ツール
+                </h3>
+                <ul className="mb-3 space-y-1 text-sm text-muted-foreground">
+                  <li>・登録ユーザー：約3,000アカウント</li>
+                  <li>・売上：月商150〜200万円／ARR約2,000〜2,500万円</li>
+                  <li>・事業再編により非コア領域となり売却検討</li>
+                </ul>
+                <p className="mt-auto text-sm text-muted-foreground">
+                  既存事業とのシナジーが高い買い手候補を探索し、
+                  従業員の異動・ユーザーサポートの継続も含めた条件で譲渡。
+                  クロージングまで約5ヶ月で完了しました。
+                </p>
+              </div>
+              <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
+                  事例03／技術負債があるサービスの継承支援
+                </p>
+                <h3 className="mb-3 text-lg font-bold">
+                  レガシーPHPで構築されたニッチ業界向けSaaS
+                </h3>
+                <ul className="mb-3 space-y-1 text-sm text-muted-foreground">
+                  <li>・技術スタック：古いフレームワーク＋オンプレ環境</li>
+                  <li>・売上：月商50万円前後／ARPU高め</li>
+                  <li>・技術負債を棚卸ししたうえでリプレイス前提での譲渡</li>
+                </ul>
+                <p className="mt-auto text-sm text-muted-foreground">
+                  技術負債の内容を可視化し、「どこまで直せば安全に運用できるか」を整理。
+                  買い手側の開発チームと連携し、1〜2年かけてモダンスタックにリプレイスする前提での条件設計を行いました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 査定の基準と考え方 */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  査定の基準と考え方
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  「いくらで売れるのか？」というご質問に対して、
+                  当社では売上や利益だけでなく、SaaS特有の指標と技術面を組み合わせて評価します。
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <h3 className="mb-2 text-lg font-semibold">事業指標の例</h3>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>・月商／ARR（年間経常収益）の水準と推移</li>
+                    <li>・解約率（チャーン）／継続率</li>
+                    <li>・顧客数・契約単価・LTV</li>
+                    <li>・チャネル構成（紹介／広告／インバウンド等）</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <h3 className="mb-2 text-lg font-semibold">技術・運営面の例</h3>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>・技術スタック／アーキテクチャのモダンさ・拡張性</li>
+                    <li>・テスト実装・監視体制・セキュリティ</li>
+                    <li>・インフラコスト・運用工数</li>
+                    <li>・ドキュメント・引き継ぎのしやすさ</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-6 text-sm text-muted-foreground">
+                これらを総合的に評価し、「いまの価値」だけでなく「買い手にとっての将来価値」も踏まえて価格レンジをご提示します。
+                技術負債がある場合も、直せる範囲かどうかを含めてフラットにお伝えします。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 費用体系 */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-8 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  費用体系
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  売却支援・買取・仲介のいずれも、初回相談は無料です。
+                  その後の料金は案件規模や役割によって個別にお見積もりいたします。
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/60">
+                    <tr>
+                      <th className="px-6 py-3 text-left font-semibold">項目</th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        目安
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        備考
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">初回相談</td>
+                      <td className="px-6 py-3">無料</td>
+                      <td className="px-6 py-3">
+                        オンラインで30〜45分程度、サービスの概要とお考えをお伺いします。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">簡易評価・価格レンジ提示</td>
+                      <td className="px-6 py-3">無料〜20万円（税込）目安</td>
+                      <td className="px-6 py-3">
+                        売上規模やソースコードの開示範囲により変動します。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">M&Aアドバイザリー（仲介・FA）</td>
+                      <td className="px-6 py-3">
+                        成約金額の3〜5%程度＋最低報酬（要相談）
+                      </td>
+                      <td className="px-6 py-3">
+                        案件規模・スキーム（株式譲渡／事業譲渡）に応じて個別に決定します。
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground">
+                ※ 上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="py-24 bg-muted/30">
           <div className="container mx-auto px-4">

@@ -571,6 +571,134 @@ export default function BuyPage() {
           </div>
         </section>
 
+        {/* 費用体系 */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-8 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  費用体系
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  案件規模や役割によって個別にお見積もりいたしますが、
+                  代表的な価格イメージは下記の通りです（※実際の条件は個別にご提示します）。
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/60">
+                    <tr>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        項目
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        目安
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        備考
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">初回相談</td>
+                      <td className="px-6 py-3">無料</td>
+                      <td className="px-6 py-3">
+                        案件の有無にかかわらず、オンラインで30〜45分程度ヒアリングします。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">
+                        技術・事業DDレポート
+                      </td>
+                      <td className="px-6 py-3">
+                        30〜80万円（税込）目安／案件
+                      </td>
+                      <td className="px-6 py-3">
+                        対象サービスの規模（売上・画面数・機能数）に応じて変動します。
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-6 py-3 font-medium">
+                        M&Aアドバイザリー（仲介・FA）
+                      </td>
+                      <td className="px-6 py-3">
+                        成約金額の3〜5%程度＋最低報酬（要相談）
+                      </td>
+                      <td className="px-6 py-3">
+                        案件規模・役割（単独／共同）によって個別に決定します。
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground">
+                ※
+                上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 買収に関する不安とその解消策 */}
+        <section className="py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                  よくある不安と、その解消の仕方
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  初めてのSaaS・Webサービスの買収では、技術・事業・運営など様々な不安が生まれます。
+                  代表的な3つの不安と、それに対して当社がどのように向き合うかをまとめました。
+                </p>
+              </div>
+              <div className="space-y-6">
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <h3 className="mb-2 text-lg font-semibold">
+                    「技術負債やセキュリティリスクを引き継いでしまわないか不安」
+                  </h3>
+                  <p className="mb-2 text-sm font-medium text-primary">
+                    →
+                    ソースコードとインフラ構成を前提とした技術DDでリスクを可視化します
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    コード品質・依存関係・テスト状況・インフラ構成・権限管理などをチェックし、
+                    &quot;どこが危ないのか&quot; をレポートに落とし込みます。
+                    必要に応じて、「買収後◯ヶ月で解消可能な範囲かどうか」も一緒に評価します。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <h3 className="mb-2 text-lg font-semibold">
+                    「数字は悪くないが、本当に伸びるサービスなのか見極められるか不安」
+                  </h3>
+                  <p className="mb-2 text-sm font-medium text-primary">
+                    →
+                    解約率や継続率、機能ごとの利用状況などを踏まえて中長期のポテンシャルを評価します
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    単なる売上推移だけでなく、ユーザー数・利用頻度・チャーン理由などを確認し、
+                    「どこを伸ばせば良いか」「どこに壁があるか」を整理します。
+                  </p>
+                </div>
+                <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
+                  <h3 className="mb-2 text-lg font-semibold">
+                    「自社のチームにきちんと引き継げるか不安」
+                  </h3>
+                  <p className="mb-2 text-sm font-medium text-primary">
+                    →
+                    買収後の技術移行・オンボーディング計画までセットで検討します
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    どのような役割のエンジニアが何人いれば安全に運用できるか、
+                    どの部分から着手すべきかなど、既存チーム構成も踏まえた現実的な移行計画を一緒に作ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="py-24">
           <div className="container mx-auto px-4">
