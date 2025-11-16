@@ -1,5 +1,7 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -186,6 +188,22 @@ export default function SaaSMAFailurePatternsPage() {
                   <strong>「前提を揃えること」</strong>
                   に重きを置いてご支援しています。
                 </p>
+              </section>
+
+              <section className="mt-8 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:justify-between">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="sm:min-w-[180px]"
+                >
+                  <Link href="/knowledge">コラム一覧に戻る</Link>
+                </Button>
+                <Button asChild size="sm" className="sm:min-w-[260px]">
+                  <Link href="/contact">
+                    SaaS M&Aの進め方について相談してみる
+                  </Link>
+                </Button>
               </section>
             </article>
           </div>

@@ -241,7 +241,7 @@ export default function CompanyPage() {
         {/* Map */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-5xl">
               <h2 className="mb-6 text-center text-2xl font-bold tracking-tight sm:text-3xl">
                 アクセス
               </h2>

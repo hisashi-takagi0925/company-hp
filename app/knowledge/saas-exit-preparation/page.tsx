@@ -1,5 +1,7 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -146,6 +148,22 @@ export default function SaaSExitPreparationPage() {
                   売却の可能性や進め方を検討するところから伴走しています。
                   「売れる状態なのか分からない」「何から話せば良いか不安」という段階でも、お気軽にご相談ください。
                 </p>
+              </section>
+
+              <section className="mt-8 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:justify-between">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="sm:min-w-[180px]"
+                >
+                  <Link href="/knowledge">コラム一覧に戻る</Link>
+                </Button>
+                <Button asChild size="sm" className="sm:min-w-[240px]">
+                  <Link href="/contact">
+                    SaaS売却の準備について相談してみる
+                  </Link>
+                </Button>
               </section>
             </article>
           </div>

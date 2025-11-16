@@ -1,5 +1,7 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -206,6 +208,20 @@ export default function SaaSTechDDPage() {
                   <strong>「投資判断にそのまま使えるレポート」</strong>
                   として整理し、買い手・売り手・仲介の三者が同じ前提に立てるよう支援しています。
                 </p>
+              </section>
+
+              <section className="mt-8 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:justify-between">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="sm:min-w-[180px]"
+                >
+                  <Link href="/knowledge">コラム一覧に戻る</Link>
+                </Button>
+                <Button asChild size="sm" className="sm:min-w-[230px]">
+                  <Link href="/contact">技術DDの相談をしてみる</Link>
+                </Button>
               </section>
             </article>
           </div>

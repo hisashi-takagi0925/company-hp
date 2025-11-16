@@ -1,5 +1,7 @@
 import { Header } from "@/app/_components/header";
 import { Footer } from "@/app/_components/footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -168,6 +170,22 @@ export default function SaaSValuationAxesPage() {
                   <strong>感覚的な「高い／安い」の議論を減らし</strong>
                   、数字と前提を共有したうえで条件を検討できるようにすることを重視しています。
                 </p>
+              </section>
+
+              <section className="mt-8 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:justify-between">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="sm:min-w-[180px]"
+                >
+                  <Link href="/knowledge">コラム一覧に戻る</Link>
+                </Button>
+                <Button asChild size="sm" className="sm:min-w-[260px]">
+                  <Link href="/contact">
+                    価格レンジの考え方について相談してみる
+                  </Link>
+                </Button>
               </section>
             </article>
           </div>
