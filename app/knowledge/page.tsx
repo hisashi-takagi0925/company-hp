@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ナレッジ | ライチョウテックパートナーズ株式会社",
+  title: "コラム一覧 | ライチョウテックパートナーズ株式会社",
   description:
-    "SaaS・WebサービスのM&Aや技術デューデリジェンスに関するナレッジをまとめたページです。小規模SaaSや個人開発サービスのオーナー、買い手企業、仲介会社の方向けに、評価や価格検討の考え方を解説します。",
+    "SaaS・WebサービスのM&Aや技術デューデリジェンスに関するコラムをまとめたページです。小規模SaaSや個人開発サービスのオーナー、買い手企業、仲介会社の方向けに、評価や価格検討の考え方を解説します。",
 };
 
 const articles = [
@@ -34,6 +34,22 @@ const articles = [
     category: "技術負債",
     readingTime: "約12分",
   },
+  {
+    href: "/knowledge/saas-ma-failure-patterns",
+    title: "小規模SaaS M&Aでよくある失敗パターンとその回避策",
+    description:
+      "小規模SaaSのM&Aで起こりがちな認識ズレ・準備不足・技術面の見落としなどの失敗パターンと、その避け方を整理します。",
+    category: "失敗パターン",
+    readingTime: "約12分",
+  },
+  {
+    href: "/knowledge/saas-exit-preparation",
+    title: "初めてのSaaS事業売却で準備しておきたいこと",
+    description:
+      "初めてサービス売却を検討するオーナー向けに、最低限そろえておくとスムーズになる数字・資料・整理のポイントを解説します。",
+    category: "売却準備",
+    readingTime: "約10分",
+  },
 ];
 
 export default function KnowledgeIndexPage() {
@@ -43,7 +59,7 @@ export default function KnowledgeIndexPage() {
       <main>
         <section className="border-b bg-muted/30 py-4">
           <div className="container mx-auto px-4">
-            <p className="text-sm text-muted-foreground">ナレッジ</p>
+            <p className="text-sm text-muted-foreground">コラム</p>
           </div>
         </section>
 
@@ -51,11 +67,11 @@ export default function KnowledgeIndexPage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                SaaS・WebサービスM&Aナレッジ
+                SaaS・WebサービスM&Aコラム
               </h1>
               <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
                 小規模SaaS・個人開発サービスの売却・買収・仲介に関わる方のために、
-                技術DDやバリュエーションの考え方を記事としてまとめています。
+                技術DDやバリュエーション、売却準備の考え方をコラムとしてまとめています。
               </p>
             </div>
           </div>

@@ -41,6 +41,14 @@ export function Footer() {
                   お問い合わせ
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/knowledge"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  コラム
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="text-center md:text-left">
