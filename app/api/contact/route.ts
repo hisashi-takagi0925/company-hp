@@ -9,7 +9,31 @@ if (process.env.SENDGRID_API_KEY) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, company, email, phone, subject, message } = body;
+    const {
+      name,
+      company,
+      email,
+      phone,
+      subject,
+      message,
+      // 買収用フィールド
+      buyPurpose,
+      buyBudget,
+      serviceType,
+      buySchedule,
+      // 売却用フィールド
+      serviceUrl,
+      revenueRange,
+      userCount,
+      operationType,
+      sellSchedule,
+      concerns,
+      // 仲介用フィールド
+      brokerageRole,
+      cooperationType,
+      caseScale,
+      hasCase,
+    } = body;
 
     // バリデーション
     if (!name || !email || !subject || !message) {
@@ -85,6 +109,36 @@ export async function POST(request: NextRequest) {
       process.env.BASE_URL ||
       "https://raicho-tech.jp";
 
+    // 種別ごとの追加情報を組み立て
+    let additionalInfo = "";
+    if (subject === "buy") {
+      additionalInfo = `
+【買収についての詳細】
+買収の目的: ${buyPurpose ? buyPurpose.join("、") : "未入力"}
+予算レンジ: ${buyBudget || "未入力"}
+サービスタイプ: ${serviceType || "未入力"}
+希望買収時期: ${buySchedule || "未入力"}
+`;
+    } else if (subject === "sell") {
+      additionalInfo = `
+【売却についての詳細】
+サービスURL: ${serviceUrl || "未入力"}
+月間売上規模（ARR）: ${revenueRange || "未入力"}
+ユーザー数・課金ユーザー数: ${userCount || "未入力"}
+運用体制: ${operationType || "未入力"}
+希望売却時期: ${sellSchedule || "未入力"}
+不安・懸念していること: ${concerns ? concerns.join("、") : "未入力"}
+`;
+    } else if (subject === "brokerage") {
+      additionalInfo = `
+【仲介・協業についての詳細】
+あなたの立場: ${brokerageRole || "未入力"}
+協業パターン: ${cooperationType || "未入力"}
+想定案件の規模レンジ: ${caseScale || "未入力"}
+具体案件の有無: ${hasCase || "未入力"}
+`;
+    }
+
     // メール本文の作成（テキスト形式）
     const emailBody = `
 お問い合わせがありました。
@@ -102,8 +156,16 @@ ${email}
 ${phone || "未入力"}
 
 【件名】
-${subject}
-
+${
+  subject === "buy"
+    ? "買収の相談（買いたい方）"
+    : subject === "sell"
+    ? "売却の相談（売りたい方）"
+    : subject === "brokerage"
+    ? "仲介・アドバイザリーの相談"
+    : "その他のご相談"
+}
+${additionalInfo}
 【メッセージ】
 ${message}
 
@@ -160,8 +222,83 @@ User-Agent: ${userAgent}
       </div>
       <div class="field">
         <div class="label">件名</div>
-        <div class="value">${subject}</div>
+        <div class="value">${
+          subject === "buy"
+            ? "買収の相談（買いたい方）"
+            : subject === "sell"
+            ? "売却の相談（売りたい方）"
+            : subject === "brokerage"
+            ? "仲介・アドバイザリーの相談"
+            : "その他のご相談"
+        }</div>
       </div>
+      ${
+        subject === "buy"
+          ? `
+      <div class="field">
+        <div class="label" style="color: #0066cc; margin-top: 20px; padding-top: 15px; border-top: 2px solid #ddd;">【買収についての詳細】</div>
+        <div class="value">
+          <div style="margin-bottom: 8px;"><strong>買収の目的:</strong> ${
+            buyPurpose ? buyPurpose.join("、") : "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>予算レンジ:</strong> ${
+            buyBudget || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>サービスタイプ:</strong> ${
+            serviceType || "未入力"
+          }</div>
+          <div><strong>希望買収時期:</strong> ${buySchedule || "未入力"}</div>
+        </div>
+      </div>
+      `
+          : subject === "sell"
+          ? `
+      <div class="field">
+        <div class="label" style="color: #0066cc; margin-top: 20px; padding-top: 15px; border-top: 2px solid #ddd;">【売却についての詳細】</div>
+        <div class="value">
+          <div style="margin-bottom: 8px;"><strong>サービスURL:</strong> ${
+            serviceUrl
+              ? `<a href="${serviceUrl}" target="_blank">${serviceUrl}</a>`
+              : "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>月間売上規模（ARR）:</strong> ${
+            revenueRange || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>ユーザー数・課金ユーザー数:</strong> ${
+            userCount || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>運用体制:</strong> ${
+            operationType || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>希望売却時期:</strong> ${
+            sellSchedule || "未入力"
+          }</div>
+          <div><strong>不安・懸念していること:</strong> ${
+            concerns ? concerns.join("、") : "未入力"
+          }</div>
+        </div>
+      </div>
+      `
+          : subject === "brokerage"
+          ? `
+      <div class="field">
+        <div class="label" style="color: #0066cc; margin-top: 20px; padding-top: 15px; border-top: 2px solid #ddd;">【仲介・協業についての詳細】</div>
+        <div class="value">
+          <div style="margin-bottom: 8px;"><strong>あなたの立場:</strong> ${
+            brokerageRole || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>協業パターン:</strong> ${
+            cooperationType || "未入力"
+          }</div>
+          <div style="margin-bottom: 8px;"><strong>想定案件の規模レンジ:</strong> ${
+            caseScale || "未入力"
+          }</div>
+          <div><strong>具体案件の有無:</strong> ${hasCase || "未入力"}</div>
+        </div>
+      </div>
+      `
+          : ""
+      }
       <div class="field">
         <div class="label">メッセージ</div>
         <div class="value">${message.replace(/\n/g, "<br>")}</div>
@@ -197,6 +334,36 @@ User-Agent: ${userAgent}
       html: emailBodyHtml,
     };
 
+    // 自動返信メール用の追加情報を組み立て
+    let confirmationAdditionalInfo = "";
+    if (subject === "buy") {
+      confirmationAdditionalInfo = `
+【買収についての詳細】
+買収の目的: ${buyPurpose ? buyPurpose.join("、") : "未入力"}
+予算レンジ: ${buyBudget || "未入力"}
+サービスタイプ: ${serviceType || "未入力"}
+希望買収時期: ${buySchedule || "未入力"}
+`;
+    } else if (subject === "sell") {
+      confirmationAdditionalInfo = `
+【売却についての詳細】
+サービスURL: ${serviceUrl || "未入力"}
+月間売上規模（ARR）: ${revenueRange || "未入力"}
+ユーザー数・課金ユーザー数: ${userCount || "未入力"}
+運用体制: ${operationType || "未入力"}
+希望売却時期: ${sellSchedule || "未入力"}
+不安・懸念していること: ${concerns ? concerns.join("、") : "未入力"}
+`;
+    } else if (subject === "brokerage") {
+      confirmationAdditionalInfo = `
+【仲介・協業についての詳細】
+あなたの立場: ${brokerageRole || "未入力"}
+協業パターン: ${cooperationType || "未入力"}
+想定案件の規模レンジ: ${caseScale || "未入力"}
+具体案件の有無: ${hasCase || "未入力"}
+`;
+    }
+
     // 問い合わせ元への確認メール本文（テキスト形式）
     const confirmationEmailBody = `
 ${name} 様
@@ -206,8 +373,17 @@ ${name} 様
 以下の内容でお問い合わせを受け付けいたしました。
 
 【お問い合わせ内容】
-件名: ${subject}
+件名: ${
+      subject === "buy"
+        ? "買収の相談（買いたい方）"
+        : subject === "sell"
+        ? "売却の相談（売りたい方）"
+        : subject === "brokerage"
+        ? "仲介・アドバイザリーの相談"
+        : "その他のご相談"
+    }
 ${company ? `会社名: ${company}` : ""}
+${confirmationAdditionalInfo}
 メッセージ:
 ${message}
 
@@ -260,7 +436,15 @@ ${message}
       
       <div class="info-box">
         <div class="info-item">
-          <span class="info-label">件名:</span> ${subject}
+          <span class="info-label">件名:</span> ${
+            subject === "buy"
+              ? "買収の相談（買いたい方）"
+              : subject === "sell"
+              ? "売却の相談（売りたい方）"
+              : subject === "brokerage"
+              ? "仲介・アドバイザリーの相談"
+              : "その他のご相談"
+          }
         </div>
         ${
           company
@@ -268,6 +452,72 @@ ${message}
             : ""
         }
       </div>
+      
+      ${
+        subject === "buy"
+          ? `
+      <div class="info-box" style="background-color: #e8f4f8; border-left: 4px solid #0066cc;">
+        <div style="font-weight: bold; color: #0066cc; margin-bottom: 10px;">【買収についての詳細】</div>
+        <div class="info-item"><span class="info-label">買収の目的:</span> ${
+          buyPurpose ? buyPurpose.join("、") : "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">予算レンジ:</span> ${
+          buyBudget || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">サービスタイプ:</span> ${
+          serviceType || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">希望買収時期:</span> ${
+          buySchedule || "未入力"
+        }</div>
+      </div>
+      `
+          : subject === "sell"
+          ? `
+      <div class="info-box" style="background-color: #e8f4f8; border-left: 4px solid #0066cc;">
+        <div style="font-weight: bold; color: #0066cc; margin-bottom: 10px;">【売却についての詳細】</div>
+        <div class="info-item"><span class="info-label">サービスURL:</span> ${
+          serviceUrl
+            ? `<a href="${serviceUrl}" target="_blank">${serviceUrl}</a>`
+            : "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">月間売上規模（ARR）:</span> ${
+          revenueRange || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">ユーザー数・課金ユーザー数:</span> ${
+          userCount || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">運用体制:</span> ${
+          operationType || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">希望売却時期:</span> ${
+          sellSchedule || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">不安・懸念していること:</span> ${
+          concerns ? concerns.join("、") : "未入力"
+        }</div>
+      </div>
+      `
+          : subject === "brokerage"
+          ? `
+      <div class="info-box" style="background-color: #e8f4f8; border-left: 4px solid #0066cc;">
+        <div style="font-weight: bold; color: #0066cc; margin-bottom: 10px;">【仲介・協業についての詳細】</div>
+        <div class="info-item"><span class="info-label">あなたの立場:</span> ${
+          brokerageRole || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">協業パターン:</span> ${
+          cooperationType || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">想定案件の規模レンジ:</span> ${
+          caseScale || "未入力"
+        }</div>
+        <div class="info-item"><span class="info-label">具体案件の有無:</span> ${
+          hasCase || "未入力"
+        }</div>
+      </div>
+      `
+          : ""
+      }
       
       <div class="message-box">
         <div class="info-label">メッセージ:</div>
