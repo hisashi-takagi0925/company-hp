@@ -182,7 +182,7 @@ export default function TechDebtAndMAPage() {
               </section>
 
               <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                <h2 className="mb-3 text-xl font-semibold tracking-tight sm:text-2xl">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   技術負債を「怖いもの」から「制御可能なもの」へ
                 </h2>
                 <p className="mb-3">

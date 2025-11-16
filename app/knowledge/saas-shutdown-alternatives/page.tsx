@@ -18,7 +18,8 @@ export default function SaaSShutdownAlternativesPage() {
       <main>
         <section className="border-b bg-muted/30 py-4">
           <div className="container mx-auto px-4 text-sm text-muted-foreground">
-            コラム &gt; 小規模SaaSオーナーがやりがちな「もったいない畳み方」と代替案
+            コラム &gt;
+            小規模SaaSオーナーがやりがちな「もったいない畳み方」と代替案
           </div>
         </section>
 
@@ -35,7 +36,9 @@ export default function SaaSShutdownAlternativesPage() {
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   時間や状況の変化から、サービスを畳まざるを得ない場面はどうしても出てきます。
                   そのときに、
-                  <strong>「静かにクローズして終わり」にしてしまうのは少しもったいない</strong>
+                  <strong>
+                    「静かにクローズして終わり」にしてしまうのは少しもったいない
+                  </strong>
                   ケースも多くあります。
                   本記事では、よくある「もったいない畳み方」と、その代わりに検討できる選択肢を整理します。
                 </p>
@@ -47,7 +50,9 @@ export default function SaaSShutdownAlternativesPage() {
                 </h2>
                 <p className="mb-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   よくあるのが、
-                  <strong>「◯月末でサービスを終了します」の一通だけでクローズ</strong>
+                  <strong>
+                    「◯月末でサービスを終了します」の一通だけでクローズ
+                  </strong>
                   してしまうパターンです。
                   オーナー側からはやむを得ない判断でも、ユーザーからすると突然の終了に感じられることがあります。
                 </p>
@@ -56,8 +61,12 @@ export default function SaaSShutdownAlternativesPage() {
                 </p>
                 <ul className="mb-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   <li>引き継ぎ先（買い手や運営委託先）を探してみる</li>
-                  <li>終了までの期間を少し長めに取り、エクスポート機能や代替サービスを案内する</li>
-                  <li>ユーザーの使い方や依存度を確認し、影響の大きいユーザーには個別に連絡する</li>
+                  <li>
+                    終了までの期間を少し長めに取り、エクスポート機能や代替サービスを案内する
+                  </li>
+                  <li>
+                    ユーザーの使い方や依存度を確認し、影響の大きいユーザーには個別に連絡する
+                  </li>
                 </ul>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   完璧な移行ができなくても、
@@ -80,8 +89,12 @@ export default function SaaSShutdownAlternativesPage() {
                   代替案：売却・部分譲渡・オープンにできる部分の検討
                 </p>
                 <ul className="mb-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  <li>サービス全体の売却や、機能単位の部分譲渡ができないか検討する</li>
-                  <li>一部の技術要素やノウハウを、OSSや記事として公開できないか考える</li>
+                  <li>
+                    サービス全体の売却や、機能単位の部分譲渡ができないか検討する
+                  </li>
+                  <li>
+                    一部の技術要素やノウハウを、OSSや記事として公開できないか考える
+                  </li>
                   <li>後から振り返れるよう、学びや数字を簡単にまとめておく</li>
                 </ul>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -98,16 +111,24 @@ export default function SaaSShutdownAlternativesPage() {
                 <p className="mb-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   「本業が忙しくなったので畳みます」というケースもよくあります。
                   これは自然な理由ですが、
-                  <strong>サービス自体の価値とオーナーの時間の問題が混ざってしまっている</strong>
+                  <strong>
+                    サービス自体の価値とオーナーの時間の問題が混ざってしまっている
+                  </strong>
                   ことも少なくありません。
                 </p>
                 <p className="mb-2 text-sm font-medium text-primary sm:text-base">
                   代替案：運営委託・共同運営・チーム化の可能性を探る
                 </p>
                 <ul className="mb-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  <li>信頼できる個人・小規模チームに、運営や開発の一部を委託する</li>
-                  <li>コミュニティやSNSで、一緒に運営してくれるパートナーを募る</li>
-                  <li>自社の他メンバーや友人に、関わりたい人がいないか声をかけてみる</li>
+                  <li>
+                    信頼できる個人・小規模チームに、運営や開発の一部を委託する
+                  </li>
+                  <li>
+                    コミュニティやSNSで、一緒に運営してくれるパートナーを募る
+                  </li>
+                  <li>
+                    自社の他メンバーや友人に、関わりたい人がいないか声をかけてみる
+                  </li>
                 </ul>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   「自分一人では無理」でも、
@@ -116,8 +137,8 @@ export default function SaaSShutdownAlternativesPage() {
                 </p>
               </section>
 
-              <section className="mb-10 rounded-lg bg-muted/30 p-5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                <h2 className="mb-2 text-sm font-semibold text-foreground sm:text-base">
+              <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   もったいなさを減らすためにできる小さな一歩
                 </h2>
                 <p className="mb-2">
@@ -128,8 +149,12 @@ export default function SaaSShutdownAlternativesPage() {
                 </p>
                 <ul className="mb-2 list-disc space-y-1 pl-5">
                   <li>サービスの現状と数字を簡単に整理してみる</li>
-                  <li>信頼できる第三者に相談し、「引き継ぎの余地があるか」を聞いてみる</li>
-                  <li>ユーザーへの影響と、自分の負担のバランスを一緒に考えてみる</li>
+                  <li>
+                    信頼できる第三者に相談し、「引き継ぎの余地があるか」を聞いてみる
+                  </li>
+                  <li>
+                    ユーザーへの影響と、自分の負担のバランスを一緒に考えてみる
+                  </li>
                 </ul>
                 <p>
                   ライチョウテックパートナーズでは、
@@ -163,5 +188,3 @@ export default function SaaSShutdownAlternativesPage() {
     </>
   );
 }
-
-

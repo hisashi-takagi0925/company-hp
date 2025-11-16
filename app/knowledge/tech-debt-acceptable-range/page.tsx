@@ -90,8 +90,8 @@ export default function TechDebtAcceptableRangePage() {
                 </p>
               </section>
 
-              <section className="mb-10 rounded-lg bg-muted/30 p-5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                <h2 className="mb-2 text-sm font-semibold text-foreground sm:text-base">
+              <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   3. 許容可否の判断は「時間軸」とセットで考える
                 </h2>
                 <p className="mb-2">

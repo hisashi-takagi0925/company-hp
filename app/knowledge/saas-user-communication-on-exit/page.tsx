@@ -139,8 +139,8 @@ export default function SaaSUserCommunicationOnExitPage() {
                 </p>
               </section>
 
-              <section className="mb-10 rounded-lg bg-muted/30 p-5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                <h2 className="mb-2 text-sm font-semibold text-foreground sm:text-base">
+              <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   5. 個別フォローが必要なユーザーを見極める
                 </h2>
                 <p className="mb-2">

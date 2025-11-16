@@ -152,7 +152,7 @@ export default function SaaSValuationAxesPage() {
               </section>
 
               <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                <h2 className="mb-3 text-xl font-semibold tracking-tight sm:text-2xl">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   「いくらで売れるか」より「どの条件なら納得できるか」
                 </h2>
                 <p className="mb-3">

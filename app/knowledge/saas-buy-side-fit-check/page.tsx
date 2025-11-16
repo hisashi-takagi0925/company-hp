@@ -108,8 +108,8 @@ export default function SaaSBuySideFitCheckPage() {
                 </p>
               </section>
 
-              <section className="mb-10 rounded-lg bg-muted/30 p-5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                <h2 className="mb-2 text-sm font-semibold text-foreground sm:text-base">
+              <section className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <h2 className="mb-3 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                   4. シナジー仮説：何のために買うのかを一文で言えるか
                 </h2>
                 <p className="mb-2">
