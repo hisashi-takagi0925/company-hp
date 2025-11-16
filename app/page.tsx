@@ -39,11 +39,14 @@ export default function Home() {
           <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-transparent to-background/80 dark:to-background/90" />
 
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="mb-6 text-3xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mb-4 text-3xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-4xl md:text-5xl lg:text-6xl">
               M&A × SaaS × 技術に強い
               <br className="hidden sm:inline" />
               小規模SaaS専門のアドバイザリー
             </h1>
+            <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
+              コードまで見るSaaS専門M&Aアドバイザリー
+            </p>
             <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               テックリードエンジニアが、SaaS・Webサービスに特化したM&Aで
               <br className="hidden sm:inline" />
@@ -98,22 +101,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 代表メッセージ */}
+        {/* なぜSaaSのM&Aと技術にこだわるのか */}
         <section className="bg-muted/30 py-24">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
-                代表メッセージ
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                <p>
-                  なぜSaaSのM&Aと再生に取り組んでいるのか――。代表自身がテックリードとして多くのWebサービス開発・グロースに関わる中で、
-                  「良いサービスなのに次の引き受け手がいない」「技術負債が理由で本来の価値よりも安く評価される」といった場面を何度も見てきました。
-                </p>
-                <p>
-                  事業とコードの両方を深く理解するエンジニアが間に入ることで、作り手・送り手・受け手の三者が納得できる継承と再生を実現したい。
-                  その思いから、Webサービス・SaaSに特化したM&Aアドバイザリー事業を立ち上げています。
-                </p>
+            <div className="mx-auto max-w-4xl">
+              <div className="rounded-xl border-2 border-border bg-background p-8 shadow-sm">
+                <h2 className="mb-6 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+                  なぜSaaSのM&Aと技術にこだわるのか
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  <p>
+                    代表自身がテックリードとして多くのWebサービス開発・グロースに関わる中で、「良いサービスなのに次の引き受け手がいない」「技術負債が理由で本来の価値よりも安く評価される」といった場面を何度も見てきました。
+                  </p>
+                  <p>
+                    事業とコードの両方を深く理解するエンジニアが間に入ることで、作り手・送り手・受け手の三者が納得できる継承と再生を実現したい。その思いから、Webサービス・SaaSに特化したM&Aアドバイザリー事業を立ち上げています。
+                  </p>
+                </div>
               </div>
             </div>
           </div>

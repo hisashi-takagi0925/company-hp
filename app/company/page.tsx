@@ -3,6 +3,8 @@ import { Footer } from "@/app/_components/footer";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { BreadcrumbListSchema } from "@/app/_components/structured-data/breadcrumb-list";
+import { OrganizationSchema } from "@/app/_components/structured-data/organization";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,14 +31,30 @@ export default function CompanyPage() {
     address
   )}&output=embed`;
 
+  const breadcrumbItems = [{ label: "会社概要" }];
+
   return (
     <>
+      <BreadcrumbListSchema items={breadcrumbItems} />
+      <OrganizationSchema
+        name="ライチョウテックパートナーズ株式会社"
+        url="https://raicho-tech.jp"
+        logo="https://raicho-tech.jp/logo.svg"
+        founder="高木 悠"
+        address={{
+          streetAddress: "南石堂町1423-4",
+          addressLocality: "長野市",
+          addressRegion: "長野県",
+          postalCode: "380-0824",
+          addressCountry: "JP",
+        }}
+      />
       <Header />
       <main>
         {/* Breadcrumbs */}
         <section className="border-b bg-muted/30 py-4">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "会社概要" }]} />
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
         </section>
 
@@ -135,15 +153,27 @@ export default function CompanyPage() {
                   <h3 className="mb-2 text-lg font-semibold">バリュー</h3>
                   <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                     <li>
-                      ・<span className="font-semibold">コードと事業の両方を見る</span>：
+                      ・
+                      <span className="font-semibold">
+                        コードと事業の両方を見る
+                      </span>
+                      ：
                       売上やKPIだけでなく、ソースコードやインフラも含めて総合的に評価します。
                     </li>
                     <li>
-                      ・<span className="font-semibold">小さなSaaSも真剣に扱う</span>：
+                      ・
+                      <span className="font-semibold">
+                        小さなSaaSも真剣に扱う
+                      </span>
+                      ：
                       月商規模にかかわらず、プロダクトとユーザーに敬意を持って向き合います。
                     </li>
                     <li>
-                      ・<span className="font-semibold">オーナーの言語で話す</span>：
+                      ・
+                      <span className="font-semibold">
+                        オーナーの言語で話す
+                      </span>
+                      ：
                       エンジニア・経営者・投資家、それぞれの立場の言葉を翻訳しながらコミュニケーションします。
                     </li>
                   </ul>

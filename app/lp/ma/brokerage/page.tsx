@@ -158,9 +158,12 @@ export default function BrokeragePage() {
                 <Handshake className="h-16 w-16 text-primary-foreground" />
               </div>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
               Webサービス・SaaSの売買仲介
             </h1>
+            <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
+              技術に強いM&A仲介パートナー
+            </p>
             <p className="mx-auto mb-6 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               売り手と買い手の適切なマッチングを実現し、スムーズな取引をサポートします。
               <br />
@@ -171,7 +174,7 @@ export default function BrokeragePage() {
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-                <Link href="/contact">技術に強いパートナーとの協業について相談する</Link>
+                <Link href="/contact">技術に強いパートナーとの協業について無料相談する</Link>
               </Button>
               <Button
                 asChild
@@ -425,7 +428,7 @@ export default function BrokeragePage() {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              技術に強いパートナーとの協業について相談する
+              技術に強いパートナーとの協業について無料相談する
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
               M&A仲介会社やFAと協業し、技術DDと事業DDの両面から評価を提供します。まずは無料相談から。
@@ -840,7 +843,7 @@ export default function BrokeragePage() {
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
             <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-              <Link href="/contact">技術に強いパートナーとの協業について相談する</Link>
+              <Link href="/contact">技術に強いパートナーとの協業について無料相談する</Link>
             </Button>
           </div>
         </section>

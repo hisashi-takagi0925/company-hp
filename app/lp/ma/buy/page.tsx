@@ -18,6 +18,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { BreadcrumbListSchema } from "@/app/_components/structured-data/breadcrumb-list";
+import { FAQPageSchema } from "@/app/_components/structured-data/faq-page";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -100,19 +102,49 @@ const deliverables = [
 ];
 
 export default function BuyPage() {
+  const breadcrumbItems = [
+    { label: "事業内容", href: "/#services" },
+    { label: "買いたい方" },
+  ];
+
+  const faqs = [
+    {
+      question: "どのようなサービスを買い取ることができますか？",
+      answer:
+        "個人開発から小規模SaaSまで、Webサービス・SaaS全般に対応しています。技術面・ビジネス面で厳しい査定をクリアした良質なサービスのみを取り扱っています。現在保有していないサービスでも、市場から買い付けを行い、安全で安心な査定をクリアしたサービスのみをご紹介します。",
+    },
+    {
+      question: "技術デューデリジェンスはどのように行われますか？",
+      answer:
+        "テックリードエンジニアが直接、コード品質、依存関係、保守リスク、移行可否などを評価します。技術負債の有無や程度も正確に把握し、適切な価格設定と移行計画を提案いたします。",
+    },
+    {
+      question: "どのような技術スタックに対応していますか？",
+      answer:
+        "主要なWeb技術スタック（React、Vue、Next.js、Ruby on Rails、Python、Node.jsなど）に対応しています。テックリードエンジニアが直接評価するため、最新の技術トレンドも踏まえた適切な評価が可能です。",
+    },
+    {
+      question: "買取後の技術移行はどのようにサポートされますか？",
+      answer:
+        "技術移行の計画・実行支援、データ移行の支援、チーム統合のサポートまで一貫してサポートいたします。移行チェックリストを作成し、スムーズな引き継ぎを実現します。",
+    },
+    {
+      question: "希望するサービスが見つからない場合はどうなりますか？",
+      answer:
+        "現在保有していないサービスでも、市場から買い付けを行います。ご希望の要件をお聞かせいただければ、適切なサービスを探索し、厳しい査定をクリアした良質なサービスのみをご紹介いたします。",
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbListSchema items={breadcrumbItems} />
+      <FAQPageSchema faqs={faqs} />
       <Header />
       <main>
         {/* Breadcrumbs */}
         <section className="border-b bg-muted/30 py-4">
           <div className="container mx-auto px-4">
-            <Breadcrumbs
-              items={[
-                { label: "事業内容", href: "/#services" },
-                { label: "買いたい方" },
-              ]}
-            />
+            <Breadcrumbs items={breadcrumbItems} />
           </div>
         </section>
 
@@ -150,9 +182,12 @@ export default function BuyPage() {
                 <Handshake className="h-16 w-16 text-primary-foreground" />
               </div>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
               Webサービス・SaaSの調達・評価支援
             </h1>
+            <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
+              SaaSの中身まで見て買う
+            </p>
             <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               「本当にこのサービスを買って大丈夫か？」
             </p>
@@ -185,7 +220,7 @@ export default function BuyPage() {
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
                 <Link href="/contact">
-                  SaaS・Webサービスの買収について相談する
+                  SaaS・Webサービスの買収について無料相談する
                 </Link>
               </Button>
               <Button
@@ -384,7 +419,7 @@ export default function BuyPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              SaaS・Webサービスの買収について相談する
+              SaaS・Webサービスの買収について無料相談する
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
               技術リスクを見極め、適正価格での買収を実現します。まずは無料相談から。
@@ -958,7 +993,7 @@ export default function BuyPage() {
             </p>
             <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
               <Link href="/contact">
-                SaaS・Webサービスの買収について相談する
+                SaaS・Webサービスの買収について無料相談する
               </Link>
             </Button>
           </div>

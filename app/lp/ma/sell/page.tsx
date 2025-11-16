@@ -138,9 +138,12 @@ export default function SellPage() {
                 <Handshake className="h-16 w-16 text-primary-foreground" />
               </div>
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
               Webサービス・SaaSの売却・買取
             </h1>
+            <p className="mx-auto mb-6 text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-2xl">
+              技術負債ごと受け止める売却支援
+            </p>
             <p className="mx-auto mb-4 max-w-3xl text-lg text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7),0_0_15px_rgba(0,0,0,0.4)] sm:text-xl">
               「このサービスを、きちんと引き継いでくれる人に託したい。」
             </p>
@@ -166,7 +169,7 @@ export default function SellPage() {
             </div>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-                <Link href="/contact">SaaS・Webサービスの売却について相談する</Link>
+                <Link href="/contact">SaaS・Webサービスの売却について無料相談する</Link>
               </Button>
               <Button
                 asChild
@@ -420,7 +423,7 @@ export default function SellPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              SaaS・Webサービスの売却について相談する
+              SaaS・Webサービスの売却について無料相談する
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-base text-muted-foreground">
               技術DDと事業DDの両面から適正価格を算定し、スピーディーな売却を実現します。まずは無料相談から。
@@ -958,7 +961,7 @@ export default function SellPage() {
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
             <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-              <Link href="/contact">SaaS・Webサービスの売却について相談する</Link>
+              <Link href="/contact">SaaS・Webサービスの売却について無料相談する</Link>
             </Button>
           </div>
         </section>
