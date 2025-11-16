@@ -346,7 +346,9 @@ export default function BuyPage() {
                     <li>• 月間ARR: 約50万円</li>
                     <li>• 技術スタック: Next.js + TypeScript + PostgreSQL</li>
                     <li>• 検討期間: 相談開始から約2ヶ月</li>
-                    <li>• 技術DD: コード品質・テスト状況・インフラコストを確認</li>
+                    <li>
+                      • 技術DD: コード品質・テスト状況・インフラコストを確認
+                    </li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     既存プロダクトの機能拡張を目的に、技術負債が比較的少ないプロダクトを選定し、
@@ -392,7 +394,9 @@ export default function BuyPage() {
                     <li>• 月間ARR: 約150万円</li>
                     <li>• 技術スタック: Python + Django + Vue.js</li>
                     <li>• 検討期間: 相談開始から約4ヶ月</li>
-                    <li>• 技術DD: アーキテクチャ・チーム体制・開発プロセスを評価</li>
+                    <li>
+                      • 技術DD: アーキテクチャ・チーム体制・開発プロセスを評価
+                    </li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     プロダクトだけでなく、開発チームのスキルセットや体制ごと評価し、
