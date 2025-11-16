@@ -317,16 +317,16 @@ export default function BuyPage() {
           </div>
         </section>
 
-        {/* 買収事例 */}
+        {/* 買収イメージ（ケーススタディ） */}
         <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                  SaaS・Webサービスの買収事例
+                  SaaS・Webサービスの買収イメージ
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                  技術DDと事業DDの両面から評価し、安全な買収を実現した事例をご紹介します
+                  以下は、技術DDと事業DDの両面から評価した場合の「典型的な買収パターン」をイメージしやすくするためのケーススタディです。
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -336,22 +336,21 @@ export default function BuyPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例1
+                      ケース1
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    個人開発のタスク管理SaaS買収
+                    個人開発のタスク管理SaaS買収イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約50万円</li>
                     <li>• 技術スタック: Next.js + TypeScript + PostgreSQL</li>
-                    <li>• 成約期間: 相談開始から約2ヶ月</li>
-                    <li>
-                      • 技術DD結果: コード品質良好、テストカバレッジ80%以上
-                    </li>
+                    <li>• 検討期間: 相談開始から約2ヶ月</li>
+                    <li>• 技術DD: コード品質・テスト状況・インフラコストを確認</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    買い手企業は既存プロダクトの機能拡張を目的として購入。技術負債が少なく、買収後すぐに統合開発を開始できました。
+                    既存プロダクトの機能拡張を目的に、技術負債が比較的少ないプロダクトを選定し、
+                    買収後すぐに統合開発に入るイメージのケースです。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -360,20 +359,21 @@ export default function BuyPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例2
+                      ケース2
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    小規模SaaSの事業買収
+                    小規模SaaSの事業買収イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約200万円</li>
                     <li>• 技術スタック: Ruby on Rails + React</li>
-                    <li>• 成約期間: 相談開始から約3ヶ月</li>
-                    <li>• 技術DD結果: 一部技術負債あり、移行計画を策定</li>
+                    <li>• 検討期間: 相談開始から約3ヶ月</li>
+                    <li>• 技術DD: 一部技術負債を把握し、改善計画を整理</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    技術負債の程度を正確に評価し、買収後の改善計画を事前に策定。買い手企業は安心して買収を決断できました。
+                    技術負債の内容と解消コストを見積もったうえで、買収後1〜2年の改善ロードマップを前提に
+                    条件を検討するようなケースをイメージしています。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -382,20 +382,21 @@ export default function BuyPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例3
+                      ケース3
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    技術チームごとの買収
+                    技術チームごとの買収イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約150万円</li>
                     <li>• 技術スタック: Python + Django + Vue.js</li>
-                    <li>• 成約期間: 相談開始から約4ヶ月</li>
-                    <li>• 技術DD結果: アーキテクチャ良好、チーム体制も評価</li>
+                    <li>• 検討期間: 相談開始から約4ヶ月</li>
+                    <li>• 技術DD: アーキテクチャ・チーム体制・開発プロセスを評価</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    コード品質だけでなく、開発チームの体制やスキルセットも評価。買い手企業は技術チームごと獲得し、即戦力として活用しています。
+                    プロダクトだけでなく、開発チームのスキルセットや体制ごと評価し、
+                    チームごと獲得して即戦力として活用するイメージのケースです。
                   </p>
                 </div>
               </div>

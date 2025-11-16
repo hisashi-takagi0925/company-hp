@@ -195,6 +195,7 @@ export default function CompanyPage() {
         </section>
 
         {/* Business Track Record */}
+        {/*
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
@@ -235,6 +236,7 @@ export default function CompanyPage() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Map */}
         <section className="py-20">

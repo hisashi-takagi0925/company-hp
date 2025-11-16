@@ -170,11 +170,16 @@ export default function BrokeragePage() {
               テックリードエンジニアが、コードと事業の両面からリスクと価値を判断します。
             </p>
             <p className="mx-auto mb-10 max-w-3xl text-base text-white/95 [text-shadow:0_2px_6px_rgba(0,0,0,0.6),0_0_12px_rgba(0,0,0,0.3)] sm:text-lg">
-              <strong className="font-semibold">技術に強い共同パートナー</strong>：M&A仲介会社やFA（ファイナンシャルアドバイザー）と協業し、技術DD（デューデリジェンス）と事業DDの両面から評価を提供します。
+              <strong className="font-semibold">
+                技術に強い共同パートナー
+              </strong>
+              ：M&A仲介会社やFA（ファイナンシャルアドバイザー）と協業し、技術DD（デューデリジェンス）と事業DDの両面から評価を提供します。
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-                <Link href="/contact">技術に強いパートナーとの協業について無料相談する</Link>
+                <Link href="/contact">
+                  技術に強いパートナーとの協業について無料相談する
+                </Link>
               </Button>
               <Button
                 asChild
@@ -346,16 +351,16 @@ export default function BrokeragePage() {
           </div>
         </section>
 
-        {/* 仲介・技術DDパートナー事例 */}
+        {/* 仲介・技術DDパートナーイメージ（ケーススタディ） */}
         <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                  M&A仲介・技術DDパートナー事例
+                  M&A仲介・技術DDパートナーとしての協業イメージ
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                  M&A仲介会社やFAと協業し、技術DDと事業DDの両面から評価を提供した事例をご紹介します
+                  以下は、M&A仲介会社やFAと協業し、技術DDと事業DDの両面から評価を提供する際の典型的なパターンをイメージしやすくするためのケーススタディです。
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -364,19 +369,24 @@ export default function BrokeragePage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例1</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      ケース1
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    M&A仲介会社との技術DD協業
+                    M&A仲介会社との技術DD協業イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 案件規模: 月間ARR約300万円</li>
                     <li>• 技術スタック: React + Node.js</li>
                     <li>• 協業期間: 約1.5ヶ月</li>
-                    <li>• 技術DD結果: コード品質・アーキテクチャを評価</li>
+                    <li>
+                      • 技術DD: コード品質・アーキテクチャ・運用コストを評価
+                    </li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    M&A仲介会社が技術評価に不安を抱えていた案件に対し、技術DDを実施。コード品質とアーキテクチャを評価し、適正価格での成約を支援しました。
+                    仲介会社が事業・条件交渉を担い、当社が技術面の評価を担当することで、
+                    買い手・売り手双方にとって納得感のある投資判断を支援するイメージです。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -384,19 +394,22 @@ export default function BrokeragePage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例2</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      ケース2
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    FAとの共同アドバイザリー
+                    FAとの共同アドバイザリーイメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 案件規模: 月間ARR約500万円</li>
                     <li>• 技術スタック: Python + Django + Vue.js</li>
                     <li>• 協業期間: 約2ヶ月</li>
-                    <li>• 技術DD結果: 技術負債を評価、改善計画を提示</li>
+                    <li>• 技術DD: 技術負債やリプレイス前提のコストを整理</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    FAが事業面を担当し、当社が技術面を担当。技術負債の程度を正確に評価し、改善計画を提示することで、買い手企業の不安を解消しました。
+                    FAが財務・事業面を担当し、当社が技術面を担当することで、
+                    技術負債を前提とした現実的な条件設計を行うケースをイメージしています。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -404,19 +417,22 @@ export default function BrokeragePage() {
                     <div className="rounded-lg bg-primary/10 p-2">
                       <Code className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-xs font-medium text-muted-foreground">事例3</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      ケース3
+                    </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    小規模SaaSの技術評価支援
+                    小規模SaaSの技術評価支援イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 案件規模: 月間ARR約100万円</li>
                     <li>• 技術スタック: Next.js + TypeScript</li>
                     <li>• 協業期間: 約1ヶ月</li>
-                    <li>• 技術DD結果: コード品質良好、適正評価を実現</li>
+                    <li>• 技術DD: コード品質や拡張性を中心に評価</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    小規模SaaSのM&Aにおいて、技術評価が不十分で適正価格がつかない懸念があった案件。技術DDを実施し、コード品質を評価することで適正価格での成約を実現しました。
+                    小規模SaaS案件において、技術評価の不足が理由で適正な価格がつかないことを防ぐために、
+                    テックリードがレビューとレポートを行うケースを想定しています。
                   </p>
                 </div>
               </div>
@@ -510,7 +526,9 @@ export default function BrokeragePage() {
                 <table className="w-full text-sm">
                   <thead className="bg-muted/60">
                     <tr>
-                      <th className="px-4 py-3 text-left font-semibold">項目</th>
+                      <th className="px-4 py-3 text-left font-semibold">
+                        項目
+                      </th>
                       <th className="px-4 py-3 text-left font-semibold">
                         一般的な大手仲介
                       </th>
@@ -524,7 +542,9 @@ export default function BrokeragePage() {
                   </thead>
                   <tbody>
                     <tr className="border-t">
-                      <td className="px-4 py-3 font-medium">SaaS・Webサービス専門性</td>
+                      <td className="px-4 py-3 font-medium">
+                        SaaS・Webサービス専門性
+                      </td>
                       <td className="px-4 py-3">幅広い業種をカバー</td>
                       <td className="px-4 py-3">IT案件も扱うが専門ではない</td>
                       <td className="px-4 py-3">
@@ -532,23 +552,33 @@ export default function BrokeragePage() {
                       </td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 font-medium">技術DD（コード・インフラ評価）</td>
-                      <td className="px-4 py-3">外部専門家にスポット依頼することが多い</td>
+                      <td className="px-4 py-3 font-medium">
+                        技術DD（コード・インフラ評価）
+                      </td>
+                      <td className="px-4 py-3">
+                        外部専門家にスポット依頼することが多い
+                      </td>
                       <td className="px-4 py-3">実施しない or 限定的</td>
                       <td className="px-4 py-3">
                         テックリードが直接実施。コードレビュー〜移行計画まで一気通貫
                       </td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 font-medium">小規模案件（数千万円以下）の対応</td>
+                      <td className="px-4 py-3 font-medium">
+                        小規模案件（数千万円以下）の対応
+                      </td>
                       <td className="px-4 py-3">優先度が低くなりがち</td>
-                      <td className="px-4 py-3">案件によって対応可否が分かれる</td>
+                      <td className="px-4 py-3">
+                        案件によって対応可否が分かれる
+                      </td>
                       <td className="px-4 py-3">
                         小規模SaaS・個人開発サービスを主な対象として歓迎
                       </td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 font-medium">スピードと丁寧さのバランス</td>
+                      <td className="px-4 py-3 font-medium">
+                        スピードと丁寧さのバランス
+                      </td>
                       <td className="px-4 py-3">スピード重視になりやすい</td>
                       <td className="px-4 py-3">担当者に依存</td>
                       <td className="px-4 py-3">
@@ -672,7 +702,9 @@ export default function BrokeragePage() {
                 <table className="w-full text-sm">
                   <thead className="bg-muted/60">
                     <tr>
-                      <th className="px-6 py-3 text-left font-semibold">項目</th>
+                      <th className="px-6 py-3 text-left font-semibold">
+                        項目
+                      </th>
                       <th className="px-6 py-3 text-left font-semibold">
                         目安
                       </th>
@@ -683,7 +715,9 @@ export default function BrokeragePage() {
                   </thead>
                   <tbody>
                     <tr className="border-t">
-                      <td className="px-6 py-3 font-medium">初回相談・案件相談</td>
+                      <td className="px-6 py-3 font-medium">
+                        初回相談・案件相談
+                      </td>
                       <td className="px-6 py-3">無料</td>
                       <td className="px-6 py-3">
                         仲介・アドバイザーの方からの案件相談や技術的な論点のご相談は、初回無料でお受けします。
@@ -713,7 +747,8 @@ export default function BrokeragePage() {
                 </table>
               </div>
               <p className="mt-4 text-xs text-muted-foreground">
-                ※ 上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
+                ※
+                上記はあくまで目安であり、具体的な金額・条件は案件内容や役割に応じて個別にご提案いたします。
               </p>
             </div>
           </div>
@@ -843,7 +878,9 @@ export default function BrokeragePage() {
               小さな悩みでも歓迎です。初回は現状・課題のメモだけで構いません。
             </p>
             <Button asChild size="lg" className="min-h-[48px] text-lg px-8">
-              <Link href="/contact">技術に強いパートナーとの協業について無料相談する</Link>
+              <Link href="/contact">
+                技術に強いパートナーとの協業について無料相談する
+              </Link>
             </Button>
           </div>
         </section>

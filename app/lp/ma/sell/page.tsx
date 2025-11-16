@@ -344,16 +344,16 @@ export default function SellPage() {
           </div>
         </section>
 
-        {/* 売却事例 */}
+        {/* 売却イメージ（ケーススタディ） */}
         <section className="py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                  SaaS・Webサービスの売却事例
+                  SaaS・Webサービスの売却イメージ
                 </h2>
                 <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                  技術DDと事業DDの両面から適正価格を算定し、スピーディーな売却を実現した事例をご紹介します
+                  以下は、技術DDと事業DDの両面から適正価格を算定し、スムーズな売却を目指す際の典型的なパターンをイメージしやすくするためのケーススタディです。
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -363,20 +363,21 @@ export default function SellPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例1
+                      ケース1
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    個人開発のタスク管理SaaS売却
+                    個人開発のタスク管理SaaS売却イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約50万円</li>
                     <li>• 技術スタック: Next.js + TypeScript</li>
-                    <li>• 売却期間: 相談開始から約2ヶ月</li>
-                    <li>• 技術DD結果: コード品質良好、適正価格で評価</li>
+                    <li>• 売却検討期間: 相談開始から約2ヶ月</li>
+                    <li>• 技術DD: コード品質やテスト実装、運用コストを確認</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    個人開発者が本業との両立が難しくなり売却を決意。技術負債が少なく、適正価格でスピーディーに売却が完了しました。
+                    個人開発者が本業との両立を見直すタイミングで、
+                    技術的な状態と事業価値を整理し、適正レンジでの売却を検討するケースをイメージしています。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -385,20 +386,21 @@ export default function SellPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例2
+                      ケース2
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    小規模SaaSの事業売却
+                    小規模SaaSの事業売却イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約200万円</li>
                     <li>• 技術スタック: Ruby on Rails + React</li>
-                    <li>• 売却期間: 相談開始から約3ヶ月</li>
-                    <li>• 技術DD結果: 一部技術負債あり、改善計画を提示</li>
+                    <li>• 売却検討期間: 相談開始から約3ヶ月</li>
+                    <li>• 技術DD: 技術負債を棚卸しし、改善計画を整理</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    技術負債があったものの、改善可能性を評価し適正価格で売却。買い手企業は改善計画を踏まえて安心して買収を決断しました。
+                    事業としては伸びているが技術負債が重くなりつつある状況で、
+                    買い手と一緒に「どこまで・どの順番で直すか」を前提に条件を決めるケースを想定しています。
                   </p>
                 </div>
                 <div className="rounded-xl border-2 border-border bg-background p-6 shadow-sm">
@@ -407,22 +409,21 @@ export default function SellPage() {
                       <Code className="h-5 w-5 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground">
-                      事例3
+                      ケース3
                     </span>
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    事業再編に伴うサービス売却
+                    事業再編に伴うサービス売却イメージ
                   </h3>
                   <ul className="mb-4 space-y-1 text-sm text-muted-foreground">
                     <li>• 月間ARR: 約150万円</li>
                     <li>• 技術スタック: Python + Django</li>
-                    <li>• 売却期間: 相談開始から約2.5ヶ月</li>
-                    <li>
-                      • 技術DD結果: アーキテクチャ良好、ユーザー継続性も評価
-                    </li>
+                    <li>• 売却検討期間: 相談開始から約2.5ヶ月</li>
+                    <li>• 技術DD: アーキテクチャとユーザー継続性を重視</li>
                   </ul>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    会社の事業再編により売却を決意。秘密保持を徹底し、ユーザーに影響を与えることなくスムーズに売却が完了しました。
+                    事業ポートフォリオの見直しに伴い、一定のユーザーがいるサービスを信頼できる買い手に託す、
+                    というケースをイメージしています。
                   </p>
                 </div>
               </div>
@@ -678,22 +679,22 @@ export default function SellPage() {
           </div>
         </section>
 
-        {/* 売却の成功事例（サンプル） */}
+        {/* 売却の成功イメージ（ケーススタディ） */}
         <section className="bg-muted/30 py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                売却の成功事例イメージ
+                売却の成功イメージ
               </h2>
               <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
                 実際の案件では守秘義務の関係で詳細は開示できませんが、
-                よくあるケースをイメージしやすいように加工した事例をご紹介します。
+                よくあるケースをイメージしやすいように抽象化したケーススタディです。
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  事例01／個人開発SaaSの事業売却
+                  ケース01／個人開発SaaSの事業売却
                 </p>
                 <h3 className="mb-3 text-lg font-bold">
                   月商80〜100万円規模のBtoB予約管理SaaS
@@ -704,13 +705,13 @@ export default function SellPage() {
                   <li>・相談〜クロージング：約3ヶ月</li>
                 </ul>
                 <p className="mt-auto text-sm text-muted-foreground">
-                  本業が多忙になり開発時間が取れなくなったオーナーからのご相談。
-                  コードと事業をセットで評価し、同業他社への引き継ぎでユーザーも継続利用できる形で成約しました。
+                  本業が多忙になり開発時間が取れなくなったオーナーからの相談を想定。
+                  コードと事業をセットで評価し、同業他社への引き継ぎでユーザーも継続利用できる形を目指すイメージです。
                 </p>
               </div>
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  事例02／事業再編に伴うサービス売却
+                  ケース02／事業再編に伴うサービス売却
                 </p>
                 <h3 className="mb-3 text-lg font-bold">
                   社内新規事業として立ち上げた業務支援ツール
@@ -722,13 +723,12 @@ export default function SellPage() {
                 </ul>
                 <p className="mt-auto text-sm text-muted-foreground">
                   既存事業とのシナジーが高い買い手候補を探索し、
-                  従業員の異動・ユーザーサポートの継続も含めた条件で譲渡。
-                  クロージングまで約5ヶ月で完了しました。
+                  従業員の異動やユーザーサポートの継続も含めた条件で譲渡するイメージのケースです。
                 </p>
               </div>
               <div className="flex h-full flex-col rounded-xl border bg-card p-6 text-left shadow-sm">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary">
-                  事例03／技術負債があるサービスの継承支援
+                  ケース03／技術負債があるサービスの継承支援
                 </p>
                 <h3 className="mb-3 text-lg font-bold">
                   レガシーPHPで構築されたニッチ業界向けSaaS
@@ -740,7 +740,7 @@ export default function SellPage() {
                 </ul>
                 <p className="mt-auto text-sm text-muted-foreground">
                   技術負債の内容を可視化し、「どこまで直せば安全に運用できるか」を整理。
-                  買い手側の開発チームと連携し、1〜2年かけてモダンスタックにリプレイスする前提での条件設計を行いました。
+                  買い手側開発チームと連携し、1〜2年かけてモダンスタックにリプレイスする前提で条件設計を行うイメージです。
                 </p>
               </div>
             </div>
