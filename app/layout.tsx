@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { CATCH_COPY } from "@/app/_constants";
 import { Analytics } from "@vercel/analytics/next";
@@ -56,6 +57,26 @@ export default function RootLayout({
       <body className={`${notoSansJP.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+        <Script
+          id="chatbot-widget-config"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ChatbotWidgetConfig = {
+                tenantId: '6933826e-fb70-48eb-ae1a-06371972ecb8',
+                apiUrl: 'https://ai-chat-bot-flax-pi.vercel.app',
+                position: 'bottom-right',
+                width: 584,
+                height: 720,
+                zIndex: 9999,
+              };
+            `,
+          }}
+        />
+        <Script
+          src="https://ai-chat-bot-flax-pi.vercel.app/chatbot-widget.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
