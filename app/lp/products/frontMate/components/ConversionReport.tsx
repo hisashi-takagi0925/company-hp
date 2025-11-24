@@ -1,9 +1,34 @@
+"use client";
+
 import React from "react";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 import { BarChart3, PieChart, TrendingUp } from "lucide-react";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 
 export const ConversionReport = () => {
   return (
-    <section id="conversion" className="py-24 bg-white overflow-hidden">
+    <section id="conversion" className="py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
@@ -27,19 +52,84 @@ export const ConversionReport = () => {
                 </div>
               </div>
 
-              <div className="h-48 flex items-end justify-between gap-2 mb-6">
-                {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
-                  <div
-                    key={i}
-                    className="w-full bg-blue-100 rounded-t-sm relative group"
-                  >
-                    <div
-                      className="absolute bottom-0 left-0 right-0 bg-blue-600 rounded-t-sm transition-all duration-500"
-                      style={{ height: `${h}%` }}
-                    ></div>
-                  </div>
-                ))}
+              <div className="h-64 mb-6">
+                <Line
+                  data={{
+                    labels: [
+                      "1週目",
+                      "2週目",
+                      "3週目",
+                      "4週目",
+                      "5週目",
+                      "6週目",
+                      "7週目",
+                      "8週目",
+                    ],
+                    datasets: [
+                      {
+                        label: "総会話数",
+                        data: [120, 180, 220, 280, 320, 380, 420, 480],
+                        borderColor: "rgb(37, 99, 235)",
+                        backgroundColor: "rgba(37, 99, 235, 0.1)",
+                        tension: 0.4,
+                        fill: true,
+                      },
+                      {
+                        label: "CV獲得数",
+                        data: [15, 22, 28, 35, 42, 50, 58, 65],
+                        borderColor: "rgb(34, 197, 94)",
+                        backgroundColor: "rgba(34, 197, 94, 0.1)",
+                        tension: 0.4,
+                        fill: true,
+                      },
+                      {
+                        label: "問い合わせ数",
+                        data: [80, 110, 140, 170, 200, 230, 260, 290],
+                        borderColor: "rgb(168, 85, 247)",
+                        backgroundColor: "rgba(168, 85, 247, 0.1)",
+                        tension: 0.4,
+                        fill: true,
+                      },
+                    ],
+                  }}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: {
+                        position: "top" as const,
+                        labels: {
+                          usePointStyle: true,
+                          padding: 15,
+                          font: {
+                            size: 12,
+                          },
+                        },
+                      },
+                      tooltip: {
+                        mode: "index",
+                        intersect: false,
+                      },
+                    },
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                        grid: {
+                          color: "rgba(0, 0, 0, 0.05)",
+                        },
+                      },
+                      x: {
+                        grid: {
+                          display: false,
+                        },
+                      },
+                    },
+                  }}
+                />
               </div>
+              <p className="text-xs text-gray-400 text-center mb-4">
+                グラフのイメージは開発中のイメージです。実際の製品と異なる場合があります
+              </p>
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-100">
                 <div>
                   <p className="text-xs text-gray-500 mb-1">総会話数</p>

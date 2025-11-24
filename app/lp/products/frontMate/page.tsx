@@ -6,6 +6,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { ConversionReport } from "./components/ConversionReport";
 import { Footer } from "./components/Footer";
 import { ContactForm } from "./components/ContactForm";
+import { CTA } from "./components/CTA";
 
 export default function FrontMateLP() {
   return (
@@ -14,6 +15,12 @@ export default function FrontMateLP() {
       <Hero />
       <ValueBlocks />
       <Features />
+      {/* CTAセクション */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <CTA />
+        </div>
+      </section>
       <HowItWorks />
       <ConversionReport />
       {/* 問い合わせフォームセクション */}

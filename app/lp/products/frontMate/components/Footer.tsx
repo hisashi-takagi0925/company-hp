@@ -20,6 +20,14 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a
+                  href="#value-proposition"
+                  className="hover:text-white transition-colors"
+                >
+                  導入のメリット
+                </a>
+              </li>
+              <li>
+                <a
                   href="#features"
                   className="hover:text-white transition-colors"
                 >
@@ -28,15 +36,18 @@ export const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#how-it-works"
+                  className="hover:text-white transition-colors"
+                >
+                  導入方法
+                </a>
+              </li>
+              <li>
+                <a
                   href="#conversion"
                   className="hover:text-white transition-colors"
                 >
                   分析レポート
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  導入事例
                 </a>
               </li>
             </ul>

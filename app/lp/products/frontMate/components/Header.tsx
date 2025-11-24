@@ -18,6 +18,12 @@ export const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           <a
+            href="#value-proposition"
+            className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            導入のメリット
+          </a>
+          <a
             href="#features"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
@@ -27,7 +33,7 @@ export const Header = () => {
             href="#how-it-works"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
-            仕組み
+            導入方法
           </a>
           <a
             href="#conversion"
@@ -37,9 +43,6 @@ export const Header = () => {
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="text-gray-600">
-            ログイン
-          </Button>
           <a href="#contact" className="inline-block">
             <Button className="bg-blue-600 text-white hover:bg-blue-700">
               お問い合わせ、利用請求はこちら
@@ -58,6 +61,13 @@ export const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 p-4 flex flex-col gap-4 shadow-lg">
           <a
+            href="#value-proposition"
+            className="text-sm font-medium text-gray-600 py-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            導入のメリット
+          </a>
+          <a
             href="#features"
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
@@ -69,7 +79,7 @@ export const Header = () => {
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            仕組み
+            導入方法
           </a>
           <a
             href="#conversion"
@@ -79,9 +89,6 @@ export const Header = () => {
             分析レポート
           </a>
           <div className="flex flex-col gap-2 pt-4 border-t border-gray-100">
-            <Button variant="ghost" className="w-full justify-start">
-              ログイン
-            </Button>
             <a
               href="#contact"
               className="w-full"
