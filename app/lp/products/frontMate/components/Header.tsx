@@ -40,9 +40,11 @@ export const Header = () => {
           <Button variant="ghost" className="text-gray-600">
             ログイン
           </Button>
-          <Button className="bg-blue-600 text-white hover:bg-blue-700">
-            お問い合わせ、利用請求はこちら
-          </Button>
+          <a href="#contact" className="inline-block">
+            <Button className="bg-blue-600 text-white hover:bg-blue-700">
+              お問い合わせ、利用請求はこちら
+            </Button>
+          </a>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -80,9 +82,15 @@ export const Header = () => {
             <Button variant="ghost" className="w-full justify-start">
               ログイン
             </Button>
-            <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
-              お問い合わせ、利用請求はこちら
-            </Button>
+            <a
+              href="#contact"
+              className="w-full"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
+                お問い合わせ、利用請求はこちら
+              </Button>
+            </a>
           </div>
         </div>
       )}

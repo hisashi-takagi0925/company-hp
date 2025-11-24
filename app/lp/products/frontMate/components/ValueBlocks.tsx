@@ -77,10 +77,10 @@ export const ValueBlocks = () => {
                     />
                   </div>
                   <div className={`p-8 ${isReversed ? "md:order-1" : ""}`}>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-blue-600 mb-3">
                       {block.title}
                     </h3>
-                    <div className="space-y-3 text-gray-700 text-sm leading-relaxed">
+                    <div className="space-y-3 text-gray-600 leading-relaxed">
                       {block.body.map((paragraph) => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
