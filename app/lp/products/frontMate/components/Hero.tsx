@@ -1,0 +1,57 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+
+export const Hero = () => {
+  return (
+    <section className="pt-16 md:pt-20 overflow-hidden">
+      <div className="w-full">
+        <Image
+          src="/hero-image.png"
+          alt="Front Mate Dashboard Interface"
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-cover"
+          priority
+        />
+      </div>
+      <div className="container mx-auto px-4 md:px-6 py-12">
+        <div className="flex flex-col gap-8 items-center text-center max-w-4xl mx-auto">
+          <div className="flex items-center gap-2">
+            <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Front Mate
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium w-fit">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            次世代のカスタマーサポートAI
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <Button size="lg" variant="outline" className="text-base h-12 px-8">
+              デモを見る
+            </Button>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 pt-2 text-sm text-gray-500">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={16} className="text-blue-600" />
+              <span>初期費用0円</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={16} className="text-blue-600" />
+              <span>即日導入可能</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={16} className="text-blue-600" />
+              <span>14日間無料トライアル</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
