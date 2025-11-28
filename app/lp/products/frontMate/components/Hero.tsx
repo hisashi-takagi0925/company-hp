@@ -7,8 +7,8 @@ export const Hero = () => {
     <section className="pt-16 md:pt-20 overflow-hidden">
       <div className="w-full">
         <Image
-          src="/hero-image2.png"
-          alt="Front Mate Dashboard Interface"
+          src="/docs_top.png"
+          alt="Front Mate ドキュメントトップイメージ"
           width={1920}
           height={1080}
           className="w-full h-auto object-cover"
