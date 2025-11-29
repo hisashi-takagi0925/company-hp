@@ -151,7 +151,7 @@ export const ConversionReport = () => {
               <TrendingUp size={16} />
               ROIを可視化
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
               チャットボットの貢献度を
               <br />
               <span className="text-blue-600">一目で把握</span>
