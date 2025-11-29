@@ -1,343 +1,145 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { SlideWrapper } from "./components/SlideWrapper";
-import { HeroSlide } from "./components/slides/HeroSlide";
-import { CaseHighlightsSlide } from "./components/slides/CaseHighlightsSlide";
-import { ConceptSlide } from "./components/slides/ConceptSlide";
-import { Benefit1Slide } from "./components/slides/Benefit1Slide";
-import { Benefit2Slide } from "./components/slides/Benefit2Slide";
-import { Benefit3Slide } from "./components/slides/Benefit3Slide";
-import { Benefit4Slide } from "./components/slides/Benefit4Slide";
-import { FeaturesSlide } from "./components/slides/FeaturesSlide";
-import { CompetitiveSlide } from "./components/slides/CompetitiveSlide";
-import { HowItWorksSlide } from "./components/slides/HowItWorksSlide";
-import { ReportSlide } from "./components/slides/ReportSlide";
-import { ContactSlide } from "./components/slides/ContactSlide";
+import { CoverSlide } from "./components/slides/CoverSlide";
+import { AgendaSlide } from "./components/slides/AgendaSlide";
+import { CompanyIntroSlide } from "./components/slides/CompanyIntroSlide";
+import { WhatIsFrontMateSlide } from "./components/slides/WhatIsFrontMateSlide";
+import { TrialBackgroundSlide } from "./components/slides/TrialBackgroundSlide";
+import { TrialProcessSlide } from "./components/slides/TrialProcessSlide";
+import { TrialRequestsSlide } from "./components/slides/TrialRequestsSlide";
+import { TrialBenefit1Slide } from "./components/slides/TrialBenefit1Slide";
+import { TrialBenefit2Slide } from "./components/slides/TrialBenefit2Slide";
+import { TrialClosingSlide } from "./components/slides/TrialClosingSlide";
+import { QASlide } from "./components/slides/QASlide";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function FrontMateSalesDeck() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      component: <CoverSlide />,
+      title: "表紙",
+      variant: "fullscreen" as const,
+    },
+    { component: <AgendaSlide />, title: "アジェンダ" },
+    { component: <CompanyIntroSlide />, title: "会社紹介" },
+    { component: <WhatIsFrontMateSlide />, title: "Front Mateとは" },
+    { component: <TrialBackgroundSlide />, title: "トライアル募集の背景" },
+    { component: <TrialProcessSlide />, title: "トライアルの内容" },
+    { component: <TrialRequestsSlide />, title: "お願い事項" },
+    { component: <TrialBenefit1Slide />, title: "トライアル特典①" },
+    { component: <TrialBenefit2Slide />, title: "トライアル特典②" },
+    { component: <QASlide />, title: "質疑応答・貴社ヒアリング" },
+    { component: <TrialClosingSlide />, title: "クロージング" },
+  ];
+
+  const totalSlides = slides.length;
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // キーボード操作
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight" || e.key === " ") {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prevSlide();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentSlide]);
+
+  // 左右クリック用の領域
+  const handleLeftClick = () => {
+    if (currentSlide > 0) {
+      prevSlide();
+    }
+  };
+
+  const handleRightClick = () => {
+    if (currentSlide < totalSlides - 1) {
+      nextSlide();
+    }
+  };
+
   return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @media print {
-            @page {
-              size: A4 landscape;
-              margin: 0.5cm;
-            }
-            
-            * {
-              -webkit-print-color-adjust: exact;
-              print-color-adjust: exact;
-            }
-            
-            body {
-              background: white;
-              margin: 0;
-              padding: 0;
-            }
-            
-            /* ヘッダーを非表示 */
-            .print-header {
-              display: none !important;
-            }
-            
-            /* 外側のコンテナ */
-            .min-h-screen {
-              padding: 0 !important;
-              background: white !important;
-            }
-            
-            /* 各スライドを1ページに */
-            .slide-wrapper {
-              page-break-after: always;
-              page-break-inside: avoid;
-              break-after: page;
-              break-inside: avoid;
-              margin: 0 !important;
-              padding: 0.4cm 0.4cm 0.3cm 0.4cm !important;
-              box-shadow: none !important;
-              border: 1px solid #e5e7eb !important;
-              max-width: 100% !important;
-              width: 100% !important;
-              min-height: calc(100vh - 0.8cm) !important;
-              height: calc(100vh - 0.8cm) !important;
-              max-height: calc(100vh - 0.8cm) !important;
-              display: flex !important;
-              flex-direction: column !important;
-              overflow: hidden !important;
-              box-sizing: border-box !important;
-            }
-            
-            /* 最後のスライドは改ページしない */
-            .slide-wrapper:last-child {
-              page-break-after: auto;
-              break-after: auto;
-            }
-            
-            /* スライド内のコンテンツを調整 */
-            .print-slide > * {
-              max-height: 100% !important;
-              overflow: hidden !important;
-              box-sizing: border-box !important;
-            }
-            
-            /* メインコンテンツエリア */
-            .slide-wrapper > div:nth-child(2) {
-              flex: 1 1 auto !important;
-              min-height: 0 !important;
-              overflow: hidden !important;
-              display: flex !important;
-              flex-direction: column !important;
-            }
-            
-            /* フォントサイズを調整 */
-            .print-slide h1 {
-              font-size: 2rem !important;
-            }
-            
-            .print-slide h2 {
-              font-size: 1.75rem !important;
-            }
-            
-            .print-slide h3 {
-              font-size: 1.5rem !important;
-            }
-            
-            .print-slide p, .print-slide span, .print-slide div {
-              font-size: 0.9rem !important;
-            }
-            
-            /* 余白を調整 */
-            .print-slide .pl-10, .print-slide .pr-8, .print-slide .py-12 {
-              padding-left: 1rem !important;
-              padding-right: 1rem !important;
-              padding-top: 0.75rem !important;
-              padding-bottom: 0.75rem !important;
-            }
-            
-            .print-slide .pt-16, .print-slide .pb-8 {
-              padding-top: 0.75rem !important;
-              padding-bottom: 0.75rem !important;
-            }
-            
-            .print-slide .mb-8, .print-slide .mb-6 {
-              margin-bottom: 0.75rem !important;
-            }
-            
-            .print-slide .mb-4 {
-              margin-bottom: 0.5rem !important;
-            }
-            
-            .print-slide .mb-2 {
-              margin-bottom: 0.4rem !important;
-            }
-            
-            /* 画像サイズを調整 */
-            .print-slide img {
-              max-height: 35vh !important;
-              max-width: 100% !important;
-              object-fit: contain !important;
-              height: auto !important;
-            }
-            
-            /* テキストの折り返しとオーバーフロー制御 */
-            .print-slide p,
-            .print-slide span,
-            .print-slide div,
-            .print-slide h1,
-            .print-slide h2,
-            .print-slide h3 {
-              word-wrap: break-word !important;
-              overflow-wrap: break-word !important;
-              max-width: 100% !important;
-            }
-            
-            /* フレックスコンテナの調整 */
-            .print-slide .flex {
-              flex-wrap: wrap !important;
-              max-width: 100% !important;
-            }
-            
-            /* グリッドレイアウトの調整 */
-            .print-slide .grid {
-              max-width: 100% !important;
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-            }
-            
-            /* 絶対配置要素の制御 */
-            .print-slide .absolute {
-              max-width: 100% !important;
-              max-height: 100% !important;
-            }
-            
-            /* 幅指定の統一 */
-            .print-slide .w-full {
-              max-width: 100% !important;
-            }
-            
-            .print-slide .md\\:w-1\\/2,
-            .print-slide .md\\:w-2\\/5,
-            .print-slide .md\\:w-3\\/5 {
-              max-width: 100% !important;
-            }
-            
-            /* 社外秘ラベルの高さを固定 */
-            .confidential-label {
-              height: auto !important;
-              min-height: auto !important;
-              max-height: fit-content !important;
-              flex-shrink: 0 !important;
-              flex-grow: 0 !important;
-              align-self: flex-start !important;
-              position: absolute !important;
-            }
-            
-            .confidential-label p {
-              margin: 0 !important;
-              padding: 0 !important;
-              line-height: 1.2 !important;
-              height: auto !important;
-              display: inline-block !important;
-            }
-            
-            /* フッターの高さを固定 */
-            .slide-footer {
-              height: auto !important;
-              min-height: auto !important;
-              max-height: fit-content !important;
-              flex-shrink: 0 !important;
-              flex-grow: 0 !important;
-              padding-top: 0.2rem !important;
-              padding-bottom: 0.2rem !important;
-              margin-top: 0 !important;
-            }
-            
-            .slide-footer p {
-              margin: 0 !important;
-              padding: 0 !important;
-              line-height: 1.2 !important;
-              height: auto !important;
-            }
-            
-            /* レイアウトコンポーネントの調整 */
-            .print-slide .flex-col,
-            .print-slide .flex-row,
-            .print-slide .md\\:flex-row {
-              max-width: 100% !important;
-              overflow: hidden !important;
-            }
-            
-            /* カードやボックス要素の調整 */
-            .print-slide .rounded-lg,
-            .print-slide .rounded-xl,
-            .print-slide .rounded-2xl {
-              max-width: 100% !important;
-              overflow: hidden !important;
-            }
-            
-            /* スペース調整の統一 */
-            .print-slide .space-y-2,
-            .print-slide .space-y-3,
-            .print-slide .space-y-4,
-            .print-slide .space-y-6 {
-              gap: 0.5rem !important;
-            }
-            
-            /* パディングの統一 */
-            .print-slide .p-4,
-            .print-slide .p-5,
-            .print-slide .p-6,
-            .print-slide .p-8 {
-              padding: 0.75rem !important;
-            }
-            
-            /* マージンの統一 */
-            .print-slide .mt-auto {
-              margin-top: auto !important;
-            }
-            
-            /* 高さ指定の調整 */
-            .print-slide .h-full {
-              height: auto !important;
-              max-height: 100% !important;
-            }
-            
-            .print-slide .h-64,
-            .print-slide .h-56 {
-              max-height: 40vh !important;
-              height: auto !important;
-            }
-          }
-        `,
-        }}
-      />
-      <div className="min-h-screen bg-gray-100 py-10 px-4 md:px-8">
-        <div className="max-w-[1320px] mx-auto mb-8 print-header">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Front Mate 営業用資料
-          </h1>
-        </div>
-
-        {/* スライド1：タイトル & ヒーロー */}
-        <SlideWrapper>
-          <HeroSlide />
-        </SlideWrapper>
-
-        {/* スライド2：課題・実績 */}
-        <SlideWrapper>
-          <CaseHighlightsSlide />
-        </SlideWrapper>
-
-        {/* スライド2：導入のメリット - 全体コンセプト */}
-        <SlideWrapper>
-          <ConceptSlide />
-        </SlideWrapper>
-
-        {/* スライド3：メリット① */}
-        <SlideWrapper>
-          <Benefit1Slide />
-        </SlideWrapper>
-
-        {/* スライド4：メリット② */}
-        <SlideWrapper>
-          <Benefit2Slide />
-        </SlideWrapper>
-
-        {/* スライド5：メリット③ */}
-        <SlideWrapper>
-          <Benefit3Slide />
-        </SlideWrapper>
-
-        {/* スライド6：メリット④ */}
-        <SlideWrapper>
-          <Benefit4Slide />
-        </SlideWrapper>
-
-        {/* スライド7：充実の機能 */}
-        <SlideWrapper>
-          <FeaturesSlide />
-        </SlideWrapper>
-
-        {/* スライド8：競合比較 */}
-        <SlideWrapper>
-          <CompetitiveSlide />
-        </SlideWrapper>
-
-        {/* スライド9：導入は驚くほど簡単 */}
-        <SlideWrapper>
-          <HowItWorksSlide />
-        </SlideWrapper>
-
-        {/* スライド10：分析レポート */}
-        <SlideWrapper>
-          <ReportSlide />
-        </SlideWrapper>
-
-        {/* スライド11：お問い合わせ */}
-        <SlideWrapper>
-          <ContactSlide />
+    <div className="relative w-screen h-screen overflow-hidden bg-white">
+      {/* スライド表示エリア */}
+      <div className="w-full h-full">
+        <SlideWrapper variant={slides[currentSlide].variant}>
+          {slides[currentSlide].component}
         </SlideWrapper>
       </div>
-    </>
+
+      {/* 左側クリック領域 */}
+      <div
+        onClick={handleLeftClick}
+        className={`absolute left-0 top-0 bottom-0 w-1/3 cursor-pointer group z-10 ${
+          currentSlide === 0 ? "cursor-not-allowed" : ""
+        }`}
+      >
+        {currentSlide > 0 && (
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="bg-black/50 backdrop-blur-sm rounded-full p-3">
+              <ChevronLeft className="w-8 h-8 text-white" />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 右側クリック領域 */}
+      <div
+        onClick={handleRightClick}
+        className={`absolute right-0 top-0 bottom-0 w-1/3 cursor-pointer group z-10 ${
+          currentSlide === totalSlides - 1 ? "cursor-not-allowed" : ""
+        }`}
+      >
+        {currentSlide < totalSlides - 1 && (
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="bg-black/50 backdrop-blur-sm rounded-full p-3">
+              <ChevronRight className="w-8 h-8 text-white" />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* スライド番号インジケーター */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-50">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === currentSlide
+                ? "bg-blue-600 w-8"
+                : "bg-gray-400 hover:bg-gray-600"
+            }`}
+            aria-label={`スライド ${index + 1} へ移動`}
+          />
+        ))}
+      </div>
+
+      {/* スライド番号表示 */}
+      <div className="absolute top-4 right-20 text-xs text-gray-400 bg-white/70 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm z-50">
+        {currentSlide + 1} / {totalSlides}
+      </div>
+    </div>
   );
 }

@@ -1,27 +1,41 @@
 import React from "react";
 
-const slideBase =
-  "w-full max-w-[1000px] min-h-[650px] bg-white overflow-hidden mx-auto rounded-2xl shadow-md border border-gray-100 relative print-slide";
-
 interface SlideWrapperProps {
   children: React.ReactNode;
+  variant?: "default" | "fullscreen";
 }
 
-export const SlideWrapper = ({ children }: SlideWrapperProps) => (
-  <section className={`${slideBase} mb-12 slide-wrapper flex flex-col`}>
-    {/* 社外秘ラベル */}
-    <div className="confidential-label absolute top-4 right-4 z-10 bg-white border-2 border-red-600 rounded px-3 py-1.5 shadow-md whitespace-nowrap h-fit w-fit flex-shrink-0">
-      <p className="text-red-600 font-bold text-sm leading-tight m-0">社外秘</p>
-    </div>
+export const SlideWrapper = ({ children, variant = "default" }: SlideWrapperProps) => {
+  const isFullscreen = variant === "fullscreen";
+  
+  return (
+    <div className="slide-wrapper w-screen h-screen flex flex-col bg-white relative">
+      {/* 社外秘ラベル */}
+      <div className="confidential-label absolute top-3 right-3 z-20 bg-white border border-red-500 rounded px-2 py-1 shadow-sm whitespace-nowrap">
+        <p className="text-red-500 font-semibold text-xs leading-none m-0">社外秘</p>
+      </div>
 
-    {/* メインコンテンツ */}
-    <div className="flex-1">{children}</div>
+      {/* メインコンテンツ - プレゼンテーション最適化 */}
+      {isFullscreen ? (
+        <div className="flex-1 w-full h-full overflow-hidden">
+          {children}
+        </div>
+      ) : (
+        <div className="flex-1 w-full overflow-hidden flex items-center justify-center px-12 py-8">
+          <div className="w-full h-full max-w-7xl mx-auto">
+            {children}
+          </div>
+        </div>
+      )}
 
-    {/* フッター */}
-    <div className="slide-footer w-full px-4 py-2 border-t border-gray-100 mt-auto h-fit flex-shrink-0">
-      <p className="text-[10px] text-gray-400 text-center m-0 leading-tight">
-        ライチョウテックパートナーズ株式会社
-      </p>
+      {/* フッター - fullscreenモードでは非表示 */}
+      {!isFullscreen && (
+        <div className="slide-footer w-full px-4 py-1.5 flex-shrink-0 bg-transparent">
+          <p className="text-[9px] text-gray-300 text-center m-0 leading-none">
+            ライチョウテックパートナーズ株式会社
+          </p>
+        </div>
+      )}
     </div>
-  </section>
-);
+  );
+};
