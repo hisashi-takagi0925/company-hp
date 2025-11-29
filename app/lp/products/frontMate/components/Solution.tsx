@@ -31,7 +31,7 @@ const solutions = [
 
 export const Solution = () => {
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section id="solution" className="py-20 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="space-y-12">
           {solutions.map((solution, index) => {

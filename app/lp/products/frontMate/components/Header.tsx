@@ -18,28 +18,34 @@ export const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           <a
-            href="#value-proposition"
+            href="#problem"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
-            導入のメリット
+            課題
           </a>
           <a
-            href="#features"
+            href="#solution"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
-            機能
+            ソリューション
           </a>
           <a
-            href="#how-it-works"
+            href="#comparison"
+            className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            競合比較
+          </a>
+          <a
+            href="#how-to-start"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
             導入方法
           </a>
           <a
-            href="#conversion"
+            href="#faq"
             className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
           >
-            分析レポート
+            FAQ
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
@@ -61,32 +67,39 @@ export const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 p-4 flex flex-col gap-4 shadow-lg">
           <a
-            href="#value-proposition"
+            href="#problem"
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            導入のメリット
+            課題
           </a>
           <a
-            href="#features"
+            href="#solution"
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            機能
+            ソリューション
           </a>
           <a
-            href="#how-it-works"
+            href="#comparison"
+            className="text-sm font-medium text-gray-600 py-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            競合比較
+          </a>
+          <a
+            href="#how-to-start"
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             導入方法
           </a>
           <a
-            href="#conversion"
+            href="#faq"
             className="text-sm font-medium text-gray-600 py-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            分析レポート
+            FAQ
           </a>
           <div className="flex flex-col gap-2 pt-4 border-t border-gray-100">
             <a

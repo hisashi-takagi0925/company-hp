@@ -20,23 +20,31 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a
-                  href="#value-proposition"
+                  href="#problem"
                   className="hover:text-white transition-colors"
                 >
-                  導入のメリット
+                  課題
                 </a>
               </li>
               <li>
                 <a
-                  href="#features"
+                  href="#solution"
                   className="hover:text-white transition-colors"
                 >
-                  機能
+                  ソリューション
                 </a>
               </li>
               <li>
                 <a
-                  href="#how-it-works"
+                  href="#comparison"
+                  className="hover:text-white transition-colors"
+                >
+                  競合比較
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#how-to-start"
                   className="hover:text-white transition-colors"
                 >
                   導入方法
@@ -44,10 +52,10 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#conversion"
+                  href="#faq"
                   className="hover:text-white transition-colors"
                 >
-                  分析レポート
+                  FAQ
                 </a>
               </li>
             </ul>
@@ -56,23 +64,13 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">サポート</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  ヘルプセンター
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  APIドキュメント
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="#contact" className="hover:text-white transition-colors">
                   お問い合わせ
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  ステータス
+                <a href="#faq" className="hover:text-white transition-colors">
+                  よくある質問
                 </a>
               </li>
             </ul>

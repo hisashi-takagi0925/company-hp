@@ -6,7 +6,7 @@ const problems = [
   {
     icon: <TrendingDown className="w-8 h-8 text-blue-600" />,
     title: "訪問者の90%が",
-    subtitle: "何も残さず離脱",
+    subtitle: "何も行動せずに離脱",
     detail: "月100件の問い合わせ機会を損失、商談コスト換算で月500万円の機会損失",
     note: "※月間サイト訪問1,000件、潜在問い合わせ率10%、商談獲得単価5万円の場合を想定",
     image: "/image1.png",
