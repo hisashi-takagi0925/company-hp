@@ -7,63 +7,81 @@ export const TrialBenefit2Slide = () => {
     <TwoColumnLayout
       left={
         <>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-blue-600">
             トライアル特典 ②
           </h2>
           
-          <div className="space-y-8">
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl shadow-lg">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-3xl shadow-md">
+          <div className="space-y-6">
+            {/* メインの特典 */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl">
                   📰
                 </div>
-                <h3 className="text-3xl font-bold text-blue-900 leading-tight">
-                  貴社PRページの<br />
-                  無料作成・無料掲載
+                <h3 className="text-2xl font-bold text-gray-900">
+                  貴社PRページの無料作成・掲載
                 </h3>
               </div>
               
-              <div className="space-y-4">
-                <p className="text-xl text-gray-800 leading-relaxed font-bold">
-                  貴社の製品・サービスを<br />
-                  弊社メディア（HP/製品LP）で紹介します。
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  <span className="font-bold text-blue-700 border-b-2 border-blue-400">導入事例としてのPR記事</span>
-                  を<span className="font-bold text-red-500">無料</span>で作成・掲載させていただきます。
-                </p>
-                <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="font-semibold text-blue-700 min-w-[90px]">作成条件：</span>
-                      <span className="text-gray-700">3ヶ月のトライアル期間終了</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="font-semibold text-blue-700 min-w-[90px]">掲載条件：</span>
-                      <span className="text-gray-700">Front Mateをご利用いただいている期間</span>
-                    </div>
+              <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                貴社の製品・サービスを弊社メディア（HP/製品LP）で
+                <span className="font-bold text-blue-700">導入事例</span>として紹介します。
+              </p>
+              
+              <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <div className="font-semibold text-blue-700 mb-1">作成条件</div>
+                    <div className="text-gray-600">3ヶ月のトライアル終了後</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-blue-700 mb-1">掲載条件</div>
+                    <div className="text-gray-600">Front Mate利用中</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-3">
-              <h4 className="font-bold text-gray-700 flex items-center gap-2">
-                <span className="w-1.5 h-6 bg-blue-600 rounded-full"></span>
-                期待できる効果
-              </h4>
-              <ul className="space-y-2 pl-4">
-                <li className="flex items-center gap-2 text-gray-600">
-                  <span className="text-blue-500">✔</span>
+            {/* 最大のメリット */}
+            <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-2xl">🎯</span>
+                <h4 className="text-xl font-bold text-amber-900">最大のメリット</h4>
+              </div>
+              <p className="text-gray-800 leading-relaxed">
+                販売代理店エージェントが保有する
+                <span className="text-3xl font-bold text-orange-600 mx-1">数千社</span>
+                の取引先に対して、<br />
+                貴社PR記事が掲載されたLPを紹介します。
+              </p>
+              <p className="text-xs text-gray-500 mt-2">
+                ※ トライアル実績があることが条件
+              </p>
+            </div>
+
+            {/* 期待できる効果 */}
+            <div>
+              <h4 className="font-bold text-gray-800 mb-3 text-lg">期待できる効果</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-gray-700">
+                  <span className="text-orange-500 font-bold mt-0.5">⭐</span>
+                  <span className="font-semibold">数千社のBtoB企業への直接リーチ</span>
+                </li>
+                <li className="flex items-start gap-2 text-gray-600">
+                  <span className="text-blue-500 mt-0.5">✔</span>
                   <span>貴社サービスの認知度向上</span>
                 </li>
-                <li className="flex items-center gap-2 text-gray-600">
-                  <span className="text-blue-500">✔</span>
+                <li className="flex items-start gap-2 text-gray-600">
+                  <span className="text-blue-500 mt-0.5">✔</span>
                   <span>被リンク獲得によるSEO効果</span>
                 </li>
-                <li className="flex items-center gap-2 text-gray-600">
-                  <span className="text-blue-500">✔</span>
+                <li className="flex items-start gap-2 text-gray-600">
+                  <span className="text-blue-500 mt-0.5">✔</span>
                   <span>先進的なAI導入企業としてのブランディング</span>
+                </li>
+                <li className="flex items-start gap-2 text-gray-600">
+                  <span className="text-blue-500 mt-0.5">✔</span>
+                  <span>新規ビジネス機会の創出</span>
                 </li>
               </ul>
             </div>
