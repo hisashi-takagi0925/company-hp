@@ -64,7 +64,7 @@ export default function RootLayout({
             __html: `
               window.ChatbotWidgetConfig = {
                 tenantId: '6933826e-fb70-48eb-ae1a-06371972ecb8',
-                apiUrl: 'https://ai-chat-bot-flax-pi.vercel.app',
+                apiUrl: 'https://front-mate.com',
                 position: 'bottom-right',
                 width: 584,
                 height: 720,

@@ -138,6 +138,14 @@ const articles = [
     category: "仲介向け",
     readingTime: "約12分",
   },
+  {
+    href: "/knowledge/website-design-vs-sales",
+    title: "綺麗なだけのサイトにユーザーが反応しない理由：デザインと成果のパラドックス",
+    description:
+      "「デザインにはこだわったのに成果が出ない」というよくある失敗の構造的な理由と、サイトを「作品」から「売れる営業マン」に変えるための解決策を解説します。",
+    category: "Web活用",
+    readingTime: "約8分",
+  },
 ];
 
 export default function KnowledgeIndexPage() {
